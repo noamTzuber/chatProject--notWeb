@@ -1,33 +1,31 @@
 import './Login.css'
 
 function Login() {
-    return (
-      <div>
-        <form action="#" method="post">
-          <h2>Sign Up</h2>
-          <p>
-            <label for="Email" class="floatLabel">Email</label>
-            <input id="Email" name="Email" type="text"></input>
-          </p>
-          <p>
-            <label for="password" class="floatLabel">Password</label>
-            <input id="password" name="password" type="password" />
-              <span>Enter a password longer than 8 characters</span>
-          </p>
-          <p>
-            <label for="confirm_password" class="floatLabel">Confirm Password</label>
-            <input id="confirm_password" name="confirm_password" type="password" />
-              <span>Your passwords do not match</span>
-          </p>
-          <p>
-          <button type="button" class="btn btn-outline-dark">Submit</button>
+  return (
+    <div id='form' className="position-absolute top-50 start-50 translate-middle">
+      <span className="fs-1" style={{padding:'30px', display:'table', margin: '0 auto'}}>Login</span>
 
-          </p>
-        </form>
-        
+      <div className='inputAndTitle'>
+        <div class="fs-6">Username</div>
+        <input type="text" class="form-control" placeholder="Type your Username" aria-label="Email" aria-describedby="basic-addon1" />
       </div>
-    );
-  }
+
+      <div className='inputAndTitle'>
+        <div class="fs-6">Password</div>
+        <input type="password" class="form-control" placeholder="Type your Password" aria-label="Email" aria-describedby="basic-addon1"/>
+      </div>
+
+      <button id = 'loginButton' class="btn btn-primary" type="button">Login</button>
+
+
+      <div id = 'registration'>
+        <div className="fs-6">Have not accounted yet?</div>
+        <a href="/Register" style={{display:'table', margin: '0 auto'}} className="fs-6">Signed up</a>
+      </div>
+      
+    </div>
+  );
+}
 
 export default Login
 
