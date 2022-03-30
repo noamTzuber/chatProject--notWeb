@@ -1,11 +1,12 @@
 
 import './App.css';
-import Login from './login/Login';
+
+import Chat from './chat/Chat';
 
 function App() {
   return (
     <div>
-      <Login/>
+      <Chat/>
     </div>
   );
 }
