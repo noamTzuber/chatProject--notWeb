@@ -1,0 +1,17 @@
+.Outgoing{
+    
+    width: 70%;
+    height: 100%;
+    top: 30%;
+    bottom: 30%;
+    right: 110%;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    margin-top: 10%;
+    color: white;
+    font-size: 1em;
+    padding: 10px 10px 10px 12px;
+    border-radius: 20px;
+    background-color: rgb(86, 8, 122);
+}

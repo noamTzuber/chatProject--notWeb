@@ -1,0 +1,45 @@
+
+.chatbox {
+    background: rgba(132, 138, 190, 0.719);
+    width: 1200px;
+    height:500px;
+    border-radius: 0.2em;
+    position: relative;
+    box-shadow: 1px 1px 12px rgba(49, 134, 95, 0.753);
+}
+.conversions{
+    position: absolute;
+    background: rgb(12, 11, 11);
+    opacity: 0.5;
+    width: 30%;
+    height:10%;
+    left:0%;
+    border-radius: 10px 0 0 10px;
+}
+.currenConv{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    right:0%;
+    border-radius: 10px 0 0 10px;
+
+}
+.scroll-container {
+    width: 350px;
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    border-width: 0em;
+    left:-40px;
+    position: relative; 
+  
+
+    
+  }
+  .scroll-page {
+    display: flex;
+    height: 98%;
+    border: 0;
+    left:0; 
+  }
