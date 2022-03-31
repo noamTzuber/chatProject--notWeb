@@ -14,8 +14,11 @@ function Conversation() {
         <Outgoing />
         <Outgoing />
         <Outgoing />
+        
         <IncomingMessage />
+        
         <IncomingMessage />
+        
         <IncomingMessage />
         <Outgoing />
         <Outgoing />

@@ -1,8 +1,7 @@
 import './Chat.css'
 import Conversation from './conversation/Conversation';
 import SummaryConversation from './summaryConversation/SummaryConversation';
-import UserData from './userData/UserData';
-
+import UserData from "./userData/UserData";
 
 function Chat() {
   return (
