@@ -4,19 +4,20 @@ import SummaryConversation from './summaryConversation/SummaryConversation';
 
 function Chat() {
   return (
-    <div className='position-absolute top-50 start-50 translate-middle'>
-      <div className='chatbox'>
-        <div class="container">
-          <div class="row" >
+    <div className='position-absolute top-50 start-50 translate-middle '>
+        <div class="container chatbox">
             <div class="col-4" >
             <div class="scroll-container" >
-               <SummaryConversation/> 
-               <SummaryConversation/>
-               <SummaryConversation/> 
-               <SummaryConversation/> 
-               <SummaryConversation/>  
-               <SummaryConversation/>  
-              </div>
+            <SummaryConversation/>
+            <SummaryConversation/> <SummaryConversation/>
+            <SummaryConversation/>
+            <SummaryConversation/>
+            <SummaryConversation/>
+            <SummaryConversation/>
+
+            <SummaryConversation/> <SummaryConversation/>
+
+            <SummaryConversation/>
             </div>
             <div class="col-8">
               <div className='currenConv'>
@@ -26,8 +27,6 @@ function Chat() {
           </div>
         </div>
       </div>
-    </div>
-
   );
 }
 
