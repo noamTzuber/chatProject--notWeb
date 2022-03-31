@@ -3,10 +3,9 @@ import './UserData.css'
 function UserData() {
     return (
 
-        <div class="userData" >
-            
-        </div>
+        <div>
 
+        </div>
     );
 }
 export default UserData

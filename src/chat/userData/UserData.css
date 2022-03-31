@@ -1,6 +1,7 @@
 .userData{
-   
+   position: relative;
+    width: 30%;
+    left: -0%;
     padding-bottom:20%;
     background-color:aliceblue;
-    left: 0 !important;
 }
