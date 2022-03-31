@@ -31,7 +31,7 @@ function Register() {
             </div>
 
             <p></p>
-            <button id='loginButton' class="btn btn-primary" type="button" onClick={verifyData()}>Register</button>
+            <button id='loginButton' class="btn btn-primary" type="button" >Register</button>
             
 
 
