@@ -2,13 +2,12 @@
 body {
     background-image: url("img.webp");
     font-family: sans-serif;
-    font-size: 10px
   }
 
 #form{
-  border-radius: 25px;
-  width: 400px;
-  height: 500px;
+  border-radius: 6% ;
+  width: 50%;
+  height: 65%;
   background-color: rgb(255, 255, 255);
 }
 
@@ -18,7 +17,7 @@ body {
 }
 
 #registration{
-  padding-top: 120px;
+  padding-top: 30%;
   display: table;
   margin: 0 auto;
 }
@@ -26,9 +25,5 @@ body {
 .inputAndTitle{
   display: table;
   margin: 0 auto;
-  padding-bottom: 8px;
+  padding-bottom: 2%;
 }
-
-
-
-
