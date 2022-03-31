@@ -13,8 +13,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div>
-    <Chat/>
-   {/* <Login/>
       <BrowserRouter>
         <Routes>
           <Route path='/Register'
@@ -22,7 +20,7 @@ function App() {
 
           <Route path='/' element={<Login />}></Route>
         </Routes>
-  </BrowserRouter>*/}
+  </BrowserRouter>
     </div>
   );
 }

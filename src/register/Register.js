@@ -3,7 +3,7 @@ import './Register.css'
 function Register() {
     return (
         <div id='form' className="position-absolute top-50 start-50 translate-middle">
-            <span className="fs-1" style={{ padding: '20px', display: 'table', margin: '0 auto' }}>Register</span>
+            <span className="fs-1" style={{ padding: '2%', display: 'table', margin: '0 auto' }}>Register</span>
 
             <div className='inputAndTitle'>
                 <div class="fs-6">Username</div>
@@ -25,7 +25,7 @@ function Register() {
                 <input type="password" class="form-control" placeholder="Type your Password" aria-label="Email" aria-describedby="basic-addon1" />
             </div>
 
-            <div className='inputAndTitle' style={{width:'220px'}}>
+            <div id = 'picterUpload' >
                 <div class="fs-6">Upload profile picture</div>
                 <input type="file" accept="image/*"/>
             </div>
