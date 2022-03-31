@@ -1,13 +1,14 @@
-.input-group{
-    position:absolute;
-    top:90%;
-    right: 15%;
-    left: 05;
 
-}
 .input-group{
     width:80%;
-    height: 30px;
+    height: 70%;
+    position:relative; 
+    
+   
+
+}
+.h{
+    margin-top: 58%;
 }
 .form-control{
     height: 40px;
