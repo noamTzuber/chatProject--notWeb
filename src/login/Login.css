@@ -1,5 +1,34 @@
+
 body {
-    background: #75a7d3;
+    background-image: url("img.webp");
     font-family: sans-serif;
     font-size: 10px
   }
+
+#form{
+  border-radius: 25px;
+  width: 400px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+}
+
+#loginButton{
+  display: table;
+  margin: 0 auto;  
+}
+
+#registration{
+  padding-top: 120px;
+  display: table;
+  margin: 0 auto;
+}
+
+.inputAndTitle{
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+
+
+
+
