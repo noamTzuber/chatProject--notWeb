@@ -7,23 +7,23 @@ function Conversation() {
 
 
     <div className='conversation'>
-     
+      <div className='text text-scroll-container'>
         <IncomingMessage />
         <Outgoing />
         <Outgoing />
         <Outgoing />
         <Outgoing />
         <Outgoing />
-        
         <IncomingMessage />
-        
         <IncomingMessage />
-        
         <IncomingMessage />
-        
-
-
-      <Btn />
+        <Outgoing />
+        <Outgoing />
+        <Outgoing />
+      </div>
+      <div>
+        <Btn />
+      </div>
     </div>
 
   );
