@@ -5,7 +5,10 @@ import Outgoing from '../message/Outgoing';
 function Conversation() {
     return (
 
-        <div className='conversaion'>
+
+        <div>
+
+        <div className='conversaion'>r
           <IncomingMessage/>
           <Outgoing/>
           <Btn/>
