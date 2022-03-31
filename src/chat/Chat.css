@@ -1,11 +1,12 @@
 
 .chatbox {
     background: rgba(132, 138, 190, 0.719);
-    width: 90%;
-    height: 500px;
-    
+    width: 93%;
+    height:90%;
+    margin: 3%;
+
     border-radius: 0.2em;
-    position: relative;
+    position: absolute;
     border: 3px solid;
     box-shadow: 1px 1px 12px rgba(49, 134, 95, 0.753);
 }

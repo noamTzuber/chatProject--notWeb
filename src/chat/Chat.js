@@ -17,6 +17,9 @@ function Chat() {
                <SummaryConversation/> 
                <SummaryConversation/>  
                <SummaryConversation/>  
+               <SummaryConversation/>  
+               <SummaryConversation/>  
+               <SummaryConversation/>  
               </div>
             </div>
             <div class="col-8">
