@@ -1,6 +1,8 @@
 import './Chat.css'
 import Conversation from './conversation/Conversation';
 import SummaryConversation from './summaryConversation/SummaryConversation';
+import UserData from './userData/UserData';
+
 
 function Chat() {
   return (
@@ -10,6 +12,7 @@ function Chat() {
         <div class="container">
           <div class="row" >
             <div class="col-4" >
+            <UserData/>
             <div class="scroll-container" >
                <SummaryConversation/> 
                <SummaryConversation/>

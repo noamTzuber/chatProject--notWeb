@@ -13,14 +13,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/Register'
-            element={<Register />}></Route>
-
-          <Route path='/' element={<Login />}></Route>
-        </Routes>
-  </BrowserRouter>
+      <Chat/>
     </div>
   );
 }
