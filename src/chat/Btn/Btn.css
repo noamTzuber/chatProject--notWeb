@@ -1,12 +1,12 @@
 .input-group{
     position:absolute;
     top:90%;
-    right: 5%;
+    right: 15%;
     left: 05;
 
 }
 .input-group{
-    width:200%;
+    width:80%;
     height: 30px;
 }
 .form-control{

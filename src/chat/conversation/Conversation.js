@@ -6,13 +6,26 @@ function Conversation() {
   return (
 
 
-    <div>
-      <div className='conversaion'>
+    <div className='conversation'>
+     
         <IncomingMessage />
         <Outgoing />
-        <Btn />
-        </div>
-        </div>
-        );
+        <Outgoing />
+        <Outgoing />
+        <Outgoing />
+        <Outgoing />
+        
+        <IncomingMessage />
+        
+        <IncomingMessage />
+        
+        <IncomingMessage />
+        
+
+
+      <Btn />
+    </div>
+
+  );
 }
-        export default Conversation;
+export default Conversation;
