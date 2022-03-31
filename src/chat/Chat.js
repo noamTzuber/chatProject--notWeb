@@ -5,7 +5,7 @@ import SummaryConversation from './summaryConversation/SummaryConversation';
 function Chat() {
   return (
 
-    <div className='position-absolute top-50 start-50 translate-middle'>
+   
       <div className='chatbox'>
         <div class="container">
           <div class="row" >
@@ -27,7 +27,7 @@ function Chat() {
           </div>
         </div>
       </div>
-    </div>
+      
 
   );
 }
