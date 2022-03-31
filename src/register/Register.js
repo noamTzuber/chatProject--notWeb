@@ -33,8 +33,7 @@ function Register() {
 
             
             <p></p>
-            <button id='loginButton' class="btn btn-primary" type="button"
-                        href='/'>Register</button>
+            <button id='loginButton' class="btn btn-primary" type="button" href='/'>Register</button>
 
 
 
