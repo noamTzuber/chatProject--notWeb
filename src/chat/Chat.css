@@ -29,14 +29,15 @@
 
 .scroll-container {
     width: 30%;
-    height:82%;
+    height:85%;
     
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
     border-width: 0em;
     left: 0%;
-    position: absolute; 
+    bottom: 0%;
+    position: absolute;
   
 
     
