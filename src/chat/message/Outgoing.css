@@ -1,12 +1,12 @@
 .Outgoing{
     
     width: 30%;
-    
-    
+
     position: relative;
     right: inherit;
-    margin-top: 1%;
+    margin: 1%;
     color: white;
+
     font-size: 1em;
     padding: 10px 10px 10px 12px;
     border-radius: 20px;

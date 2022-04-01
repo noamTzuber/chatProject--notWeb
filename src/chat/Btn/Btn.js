@@ -3,11 +3,15 @@ import './Btn.css'
 function Btn() {
     return (
 
-        <div class="input-group mb-3 h" >
-            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
-            <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+        <div className='bottom-bar'>
+            <div className="type_msg">
+                <div className="input_msg_write">
+                    <input type="text" className="write_msg" placeholder="Type a message"/>
+                    <button className="msg_send_btn" type="button"><i className="fa fa-paper-plane-o"
+                                                                      aria-hidden="true"></i></button>
+                </div>
+            </div>
         </div>
-
     );
 }
 export default Btn

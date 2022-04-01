@@ -1,19 +1,38 @@
 
-.input-group{
-    width:80%;
-    height: 70%;
-    position:relative; 
-    
-   
 
+
+.bottom-bar {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background: white;
+    border-radius: 20px;
+    margin-top: 10px;
 }
-.h{
-    margin-top: 58%;
+
+.type_msg {position: relative; }
+.msg_send_btn {
+    background: #05728f none repeat scroll 0 0;
+
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 33px;
+    position: absolute;
+    right:1%;
+    border: 0;
+    top: 11px;
+    width: 33px;
 }
-.form-control{
-    height: 40px;
-}
-.btn-outline-secondary{
+.input_msg_write input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border:  0;
+
     color: black;
-    width: 10%;
+    font-size: 15px;
+    min-height: 48px;
+    width: 100%;
+
 }
