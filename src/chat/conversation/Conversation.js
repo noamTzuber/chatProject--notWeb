@@ -7,7 +7,6 @@ function Conversation() {
 
 
     <div className='conversation'>
-      <div className='text text-scroll-container'>
         <IncomingMessage />
         <Outgoing />
         <Outgoing />
@@ -24,10 +23,6 @@ function Conversation() {
         <Outgoing />
         <Outgoing />
       </div>
-      <div>
-        <Btn />
-      </div>
-    </div>
 
   );
 }

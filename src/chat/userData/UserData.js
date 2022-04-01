@@ -3,7 +3,8 @@ import './UserData.css'
 function UserData() {
     return (
 
-        <div>
+        <div className="userData">
+            itay shwatz
 
         </div>
     );
