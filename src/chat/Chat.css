@@ -34,7 +34,7 @@
     /* give the outermost container a predefined size */
     position: absolute;
     top: 0;
-    bottom: 10%;
+    bottom: 0%;
 
     left: 0;
     display: flex;
@@ -48,12 +48,14 @@
     background: transparent;
     flex-grow: 1;
     width: 100%;
-
     display: flex;
     flex-direction: column;
     left: 0;
 
     min-height: 0;
+}
+#left-section{
+    padding-right: 4%;
 }
 .bottom-bar {
     position: absolute;
@@ -66,18 +68,39 @@
 
 .content{
     position: relative;
-    margin-top: 1%;
+    margin-top: 0.3%;
 
 }
 .scrollable-content {
     background: white;
-    flex-grow: 1;
+
+    color: black;
     overflow: auto;
     overflow-y: scroll;
-    overflow-x:hidden;
-    border-radius: 25px;
-    mso-margin-bottom-alt: 10px;/* scroll thumb and track */
+    overflow-x: hidden;
 }
+
+
+#summary-conversation{
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+/* scroll thumb and track */
+::-webkit-scrollbar {
+    width: 5px;
+
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 100px;
+    height: 50px;
+}
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
 .left-container{
     background: transparent;
     width: 75%;
