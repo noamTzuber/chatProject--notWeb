@@ -1,15 +1,14 @@
-.Outgoing{
-    
-    width: 30%;
+.Outgoing {
 
+    width: 30%;
     position: relative;
     right: inherit;
     margin: 1%;
-    color: white;
     border-radius: 20px;
-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     font-size: 1em;
     padding: 10px 10px 10px 12px;
-
-    background-color: rgb(16, 12, 18);
+    color: #000000;
+    background-color: rgba(229, 219, 219, 0.65);
 }
+

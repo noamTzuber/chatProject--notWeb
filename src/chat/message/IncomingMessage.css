@@ -8,12 +8,13 @@
 
     position: relative;
     margin: 1%;
-    color: white;
+
     font-size: 1em;
     padding: 10px 10px 10px 12px;
     border-radius: 20px;
     border-bottom-right-radius: 0px;
-    background-color: black;
+    color: #000000;
+    background-color: rgba(229, 219, 219, 0.65);
 }
 
 
