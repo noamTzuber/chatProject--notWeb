@@ -8,7 +8,9 @@
     bottom: 0;
     background: white;
     border-radius: 20px;
-    margin-top: 10px;
+    border-top-left-radius:0px ;
+    border-top-right-radius:0px ;
+
 }
 
 .type_msg {position: relative; }

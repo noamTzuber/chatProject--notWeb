@@ -15,11 +15,11 @@ function Chat() {
 
             <div class="col-3">
                 <div className="container">
-                    <div className="section">
+                    <div className="section" id="left-section">
                         <div className="content">
                             <UserData/>
                         </div>
-                        <div className="scrollable-content content">
+                        <div className="scrollable-content" id="summary-conversation">
                             <SummaryConversation/>
                             <SummaryConversation/>
                             <SummaryConversation/>
@@ -38,15 +38,15 @@ function Chat() {
                 <div className="left-container">
                     <div className="section">
                         <div className="content">
-<Contact/>
+                            <Contact/>
                         </div>
 
                         <div className='scrollable-content content '>
-                           <Conversation/>
+                            <Conversation/>
                         </div>
                     </div>
                     <div className="content">
-                       <Btn/>
+                        <Btn/>
                     </div>
                 </div>
             </div>
