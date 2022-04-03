@@ -6,9 +6,10 @@
     right: inherit;
     margin: 1%;
     color: white;
-
+    border-radius: 20px;
+border-bottom-left-radius: 0px;
     font-size: 1em;
     padding: 10px 10px 10px 12px;
-    border-radius: 20px;
+
     background-color: rgb(16, 12, 18);
 }

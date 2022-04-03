@@ -1,17 +1,18 @@
 
 .incoming {
-    
+
     width: 30%;
     top: 5%;
 
-    left: 60%;
-    padding: 10px;
+    left: 68%;
+
     position: relative;
-    margin-top: 1%;
+    margin: 1%;
     color: white;
     font-size: 1em;
     padding: 10px 10px 10px 12px;
     border-radius: 20px;
+    border-bottom-right-radius: 0px;
     background-color: black;
 }
 

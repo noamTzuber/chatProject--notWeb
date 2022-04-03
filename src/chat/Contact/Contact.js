@@ -4,8 +4,7 @@ function Contact() {
     return (
 
         <div className="contact">
-            itay shwatz
-
+            itay shwartz
         </div>
     );
 }

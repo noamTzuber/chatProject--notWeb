@@ -4,8 +4,8 @@
     height: 100%;
     background-color:white;
     border-radius: 25px;
-    margin-bottom: 3%;
-   border-bottom-left-radius: 0px;
+    padding-bottom: 4.5%;
+       border-bottom-left-radius: 0px;
    border-bottom-right-radius: 0px;
 
 }

@@ -19,7 +19,7 @@ function Chat() {
                         <div className="content">
                             <UserData/>
                         </div>
-                        <div className="scrollable-content" id="summary-conversation">
+                        <div className="scrollable-content" id="summary-conversation" style={{marginTop :"1%"}}>
                             <SummaryConversation/>
                             <SummaryConversation/>
                             <SummaryConversation/>
