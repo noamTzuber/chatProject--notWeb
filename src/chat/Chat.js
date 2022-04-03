@@ -41,7 +41,7 @@ function Chat() {
                             <Contact/>
                         </div>
 
-                        <div className='scrollable-content content '>
+                        <div className='scrollable-content content' style={{backgroundColor:"rgb(194 190 190 / 42%)"}}>
                             <Conversation/>
                         </div>
                     </div>
