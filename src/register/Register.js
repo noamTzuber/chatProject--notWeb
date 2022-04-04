@@ -1,8 +1,32 @@
 import './Register.css'
 
 function Register() {
+
+    function validation(){
+        document.getElementById("error-message").innerHTML = ""
+
+        let userName =  document.getElementById("userName").value;
+        if (userName.length === 0){
+            document.getElementById("error-message").innerHTML += "please enter Username<br>"
+        }
+
+
+        let password = document.getElementById("password").value;
+        if ( password.length < 8 )
+            document.getElementById("error-message").innerHTML += "Use 8 characters or more for your password<br>"
+        else {
+            if (!/[0-9]/.test(password))
+                document.getElementById("error-message").innerHTML += "Use numbers for your password<br>"
+            if (!/[a-z, A-Z]/.test(password))
+                document.getElementById("error-message").innerHTML += "Use letters for your password<br>"
+            if ((!/^[a-z,A-Z,0-9]+$/.test(password)))
+                document.getElementById("error-message").innerHTML += "Use only English and numbers<br>"
+        }
+    }
+
+
     return (
-        <div id='form' className="position-absolute top-50 start-50 translate-middle">
+        <div id='form' className="my-form position-absolute top-50 start-50 translate-middle">
             <span className="fs-1" style={{ padding: '2%', display: 'table', margin: '0 auto' }}>Register</span>
 
             <div className='inputAndTitle'>
@@ -31,8 +55,8 @@ function Register() {
             </div>
 
             <p></p>
-            <button id='loginButton' class="btn btn-primary" type="button" >Register</button>
-            
+            <button id='loginButton' class="btn btn-primary" type="button" onClick={validation} >Register</button>
+            <div id = "error-message"></div>
 
 
         </div>
