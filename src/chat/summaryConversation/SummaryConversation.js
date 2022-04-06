@@ -1,19 +1,27 @@
 import './SummaryConversation.css'
 
 
-function SummaryConversation() {
+
+function SummaryConversation({name, time, lastMessage}) {
     return (
         <div>
-        <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-          <h7 class="mb-1">List group item heading</h7>
-          <small class="text-muted">3 days ago</small>
+            <div>
+                <a href="#" className="list-group-item list-group-item-action">
+                    <div className="d-flex w-100 justify-content-between">
+                        <h7 className="mb-1">{name}</h7>
+                        <small className="text-muted">{time}</small>
+                    </div>
+
+                    <small className="text-muted" id="slast-ma">
+                        {lastMessage}</small>
+                </a>
+            </div>
+
+
         </div>
 
-        <small class="text-muted">And some muted small print.</small>
-      </a>
-    </div>
-
-    );
+)
+;
 }
+
 export default SummaryConversation
