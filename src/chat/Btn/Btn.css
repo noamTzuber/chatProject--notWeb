@@ -38,3 +38,7 @@
     width: 100%;
 
 }
+.clip{
+    position: absolute;
+    width: 10%;
+}
