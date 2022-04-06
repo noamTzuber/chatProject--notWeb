@@ -11,9 +11,9 @@ body {
   display: table;
   margin: 0 auto;  
   border-radius: 6% ;
-  width: 400px;
-  height: 600px;
-  background-color: rgb(255, 255, 255);
+  width: 30%;
+  height: 63%;
+  background-color: rgb(255, 255, 255,0.68);
 }
 
 #loginButton{
