@@ -16,7 +16,11 @@
     color: #000000;
     background-color: rgba(229, 219, 219, 0.65);
 }
-
+.message-time{
+    font-size: 60%;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.53);
+}
 
 
 
