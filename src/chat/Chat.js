@@ -14,13 +14,13 @@ function Chat() {
     const userList = users.map((user, key) => {
         return < SummaryConversation{...user} key={key}/>
     });
-    const messageList = users[0].text.map((src, key) =>{if(src.isIncoming===0)
-        {
+    const messageList = users[1].chats[0].text.map((src, key) => {
+        if (src.isIncoming === 0) {
             return <Outgoing {...src} key={key}/>
         }
-        else if(src.isIncoming===1){
+
         return <IncomingMessage {...src} key={key}/>
-    }
+
     });
     return (
         <div className='chatbox'>
@@ -31,7 +31,8 @@ function Chat() {
                         <div className="content">
                             <UserData/>
                         </div>
-                        <div className="scrollable-content" id="summary-conversation" style={{marginTop: "1%", backgroundColor: "rgb(194 190 190 / 42%)"}}>
+                        <div className="scrollable-content" id="summary-conversation"
+                             style={{marginTop: "1%", backgroundColor: "rgb(194 190 190 / 42%)"}}>
                             {userList}
                         </div>
                     </div>
@@ -43,7 +44,6 @@ function Chat() {
                         <div className="content">
                             <Contact/>
                         </div>
-
                         <div className='scrollable-content content' style={{backgroundColor: "rgb(194 190 190 / 42%)"}}>
                             {messageList}
                         </div>
