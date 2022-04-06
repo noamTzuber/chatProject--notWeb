@@ -72,10 +72,11 @@
 
 }
 .scrollable-content {
-    background: transparent;
+    backgroundColor: rgb(194 ,190 ,190 ,42%) !important;
     color: black;
     overflow: auto;
     overflow-y: scroll;
+    height:100%;
     overflow-x: hidden;
 }
 
@@ -100,7 +101,7 @@
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-.left-container{
+.right-container{
     background: transparent;
     width: 75%;
 

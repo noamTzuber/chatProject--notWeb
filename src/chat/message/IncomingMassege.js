@@ -1,9 +1,11 @@
 import './IncomingMessage.css'
 
-function IncomingMessage() {
+function IncomingMessage({txt}) {
+
     return (
+
         <div class="incoming">
-          Hey, Father's Day is coming up...kjhlkjfsgjgdfk jgergbdsmgeskjvh
+            {txt}
         </div>
     );
 }

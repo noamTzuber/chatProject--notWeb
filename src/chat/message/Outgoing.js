@@ -1,11 +1,11 @@
 import './Outgoing.css'
 
-function Outgoing() {
+function Outgoing({txt}) {
+
     return (
 
-       
         <div class="Outgoing">
-         hey...
+            {txt}
         </div>
         
         
