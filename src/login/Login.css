@@ -33,3 +33,10 @@ body {
   margin: 0 auto;
   padding-bottom: 2%;
 }
+
+#errorMessage{
+  font-size: small;
+  color: rgb(255, 0, 0);
+  display: table;
+  margin: 0 auto;
+}

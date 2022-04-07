@@ -1,4 +1,5 @@
 import './Register.css'
+import {users} from "../DB";
 
 function Register() {
 
@@ -7,6 +8,10 @@ function Register() {
         errorMessage.innerHTML = ""
 
         let userName = document.getElementById("userName").value;
+        for(let i = 0; i < users.length; i++){
+            if(userName === users[i].name)
+                errorMessage.innerHTML = "Username already exist<br>"
+        }
         if (userName.length === 0) {
             errorMessage.innerHTML += "please enter Username<br>"
         } else if (/[^a-zA-Z0-9]/.test(userName)) {
@@ -38,10 +43,9 @@ function Register() {
         }
 
         if (errorMessage.innerHTML === "") {
-            console.log('s')
+            //push
+            window.location.href = '/Chat'  ;
         }
-
-
     }
 
 
@@ -73,7 +77,9 @@ function Register() {
                 <input type="file" accept="image/*"/>
             </div>
 
-            <button id='loginButton' className="btn btn-primary" type="button" onClick={validation} style={{marginTop: "3%"}}>Register</button>
+            <button id='loginButton' className="btn btn-primary" type="button" onClick={validation}
+                    style={{marginTop: "3%"}}>Register
+            </button>
 
             <div id="error-message"></div>
 
