@@ -1,10 +1,10 @@
 import './UserData.css'
+import React from "react";
 
 function UserData() {
     return (
 
         <div className="userData">
-
             <img src="img2.jpg" style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>
             <span className="position-absolute top-50 start-50 translate-middle">itay shwartz</span>
 
@@ -15,6 +15,8 @@ function UserData() {
                     <path fillRule="evenodd"
                           d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                 </svg>
+
+
             </button>
         </div>
     );

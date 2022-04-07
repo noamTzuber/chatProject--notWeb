@@ -3,20 +3,21 @@ import users from "../../DB";
 
 // {name, lastTime, lastMessage, setCurrentConversation}
 function SummaryConversation(props) {
-
-    var showConversation = function (name){
-        console.log(users[1].chats[1].text);
-        props.setCurrentConversation(users[1].chats[1].text);
+    var showConversation = function(contact){
+        for (let i=0;i<users[0].chats.length;i++){
+            if (contact === users[0].chats[i].contact){
+                props.setCurrentConversation(users[0].chats[i].text);
+            }
+        }
     }
     return (
         <div >
-            <div onClick={() => {showConversation(props.name)}}>
+            <div onClick={() => {showConversation(props.contact)}}>
                 <a href="#" className="list-group-item list-group-item-action" >
                     <div className="d-flex w-100 justify-content-between" >
-                        <h6 className="mb-1">{props.name}</h6>
+                        <h6 className="mb-1">{props.contact}</h6>
                         <small className="text-muted">{props.lastTime}</small>
                     </div>
-
                     <small className="text-muted" id="slast-ma">
                         {props.lastMessage}</small>
                 </a>
