@@ -6,7 +6,7 @@ function SummaryConversation(props) {
     var showConversation = function(contact){
         for (let i=0;i<users[0].chats.length;i++){
             if (contact === users[0].chats[i].contact){
-                props.setCurrentConversation(users[0].chats[i].text);
+                props.setCurrentConversation(users[0].chats[i]);
             }
         }
     }
