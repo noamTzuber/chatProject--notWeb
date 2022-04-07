@@ -14,8 +14,8 @@ const users = [{
         nickName: 'nono',
         password: 'nono1234',
         chats: [
-            {contact:'itay',text:[{txt: 'hye', isIncoming:0}, {txt: 'bye' ,isIncoming:1}]},
-            {contact:'dvir',text:[{txt: 'you', isIncoming:0}, {txt: 'me' ,isIncoming:1}]}
+            {contact:'itay',text:[{txt: 'hye111', isIncoming:0}, {txt: 'bye111' ,isIncoming:1}]},
+            {contact:'dvir',text:[{txt: 'you111', isIncoming:0}, {txt: 'me111' ,isIncoming:1}]}
         ],
         lastMessage:'bye',
         lastTime:'9:00'
