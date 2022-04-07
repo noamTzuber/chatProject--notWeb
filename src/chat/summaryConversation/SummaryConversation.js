@@ -11,14 +11,14 @@ function SummaryConversation(props) {
         }
     }
     return (
-        <div >
+        <div>
             <div onClick={() => {showConversation(props.contact)}}>
                 <a href="#" className="list-group-item list-group-item-action" >
                     <div className="d-flex w-100 justify-content-between" >
                         <h6 className="mb-1">{props.contact}</h6>
                         <small className="text-muted">{props.lastTime}</small>
                     </div>
-                    <small className="text-muted" id="slast-ma">
+                    <small className="text-muted" id="slast-ma" style={{textOverflow: "ellipsis \" [..]\";"}}>
                         {props.lastMessage}</small>
                 </a>
             </div>

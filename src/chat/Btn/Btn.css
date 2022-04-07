@@ -12,6 +12,7 @@
     border-top-right-radius:0px ;
 
 }
+
 .send{
     border:solid rgba(255, 0, 0, 0);
     background-color: white;
@@ -29,7 +30,7 @@
     position: absolute;
     right:1.2%;
     border: 0;
-    border: 5px solid rgba(7, 7, 7, 0.34);
+    border: 1px solid rgba(7, 7, 7, 0.34);
     top: 15%;
     width: 33px;
 }
@@ -41,6 +42,7 @@
     font-size: 15px;
     min-height: 48px;
     width: 100%;
+
 
 }
 

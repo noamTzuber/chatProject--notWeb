@@ -7,9 +7,12 @@ function Btn(props) {
         if(currentText===''){
             return;
         }
+        let d = new Date();
+        let time= (d.getHours()<10?'0':'')+d.getHours()+':'+(d.getMinutes()<10?'0':'')+d.getMinutes();
+        let date= d.getDay()+'.'+d.getMonth()+'.'+d.getFullYear();
         for (let i = 0; i < users[0].chats.length; i++) {
             if (props.contact === users[0].chats[i].contact) {
-                users[0].chats[i].text.push({txt: currentText, isIncoming: 0});
+                users[0].chats[i].text.push({txt: currentText,time:time+date ,isIncoming: 0});
                 props.set( users[0].chats[i].text.concat([]));
 
             }
@@ -17,7 +20,7 @@ function Btn(props) {
         document.getElementById('current-text').value = '';
 
     }
-    let d = new Date();
+
 
 
     return (

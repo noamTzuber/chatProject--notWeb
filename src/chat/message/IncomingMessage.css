@@ -9,21 +9,8 @@
     font-size: 1em;
     padding: 10px 10px 10px 12px;
     color: #000000;
+
     background-color: rgba(229, 219, 219, 0.65);
-
-    /*width: 30%;*/
-    /*top: 5%;*/
-
-    /*left: 68%;*/
-
-    /*position: relative;*/
-    /*margin: 1%;*/
-    /*font-size: 1em;*/
-    /*padding: 10px 10px 10px 12px;*/
-    /*border-radius: 20px;*/
-    /*border-bottom-right-radius: 0px;*/
-    /*color: #000000;*/
-    /*background-color: rgba(229, 219, 219, 0.65);*/
 }
 .message-time{
     font-size: 60%;
