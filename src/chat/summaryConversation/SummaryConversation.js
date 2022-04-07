@@ -18,7 +18,6 @@ function SummaryConversation(props) {
                         <h6 className="mb-1">{props.contact}</h6>
                         <small className="text-muted">{props.lastTime}</small>
                     </div>
-
                     <small className="text-muted" id="slast-ma">
                         {props.lastMessage}</small>
                 </a>

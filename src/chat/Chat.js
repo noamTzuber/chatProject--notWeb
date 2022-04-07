@@ -15,6 +15,7 @@ function Chat() {
 
     const [currentTalk, setCurrentTalk]= useState([])
 
+
     const userList = users[0].chats.map((user, key) => {
         return < SummaryConversation{...user} setCurrentConversation={setCurrentTalk}  key={key}/>
     });
