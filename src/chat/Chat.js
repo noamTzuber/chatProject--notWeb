@@ -14,6 +14,7 @@ import RightSide from "./rightSide/RightSide";
 function Chat() {
 
     const [currentTalk, setCurrentTalk]= useState({contact:'',lastMessage:'',lastTime:'',text:[]})
+    const [currentMessages, setCurrentMessages]= useState([])
 
     const userList = users[0].chats.map((user, key) => {
         return < SummaryConversation{...user} setCurrentConversation={setCurrentTalk}  key={key}/>
@@ -37,7 +38,7 @@ function Chat() {
             </div>
 
             <div className="col-9">
-                <RightSide currentConversation = {currentTalk}/>
+                <RightSide currentConversation = {currentTalk} setMessages ={setCurrentMessages}/>
             </div>
 
         </div>

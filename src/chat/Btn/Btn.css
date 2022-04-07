@@ -12,11 +12,15 @@
     border-top-right-radius:0px ;
 
 }
+.send{
+    border:solid rgba(255, 0, 0, 0);
+    background-color: white;
 
+}
 .type_msg {position: relative; }
 .msg_send_btn {
     background: #05728f none repeat scroll 0 0;
-
+    border: black;
     border-radius: 50%;
     color: #fff;
     cursor: pointer;
@@ -25,19 +29,33 @@
     position: absolute;
     right:1.2%;
     border: 0;
-    top: 11px;
+    border: 5px solid rgba(7, 7, 7, 0.34);
+    top: 15%;
     width: 33px;
 }
 .input_msg_write input {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border:  0;
+    right:10px;
     color: black;
     font-size: 15px;
     min-height: 48px;
     width: 100%;
 
 }
-.clip{
+
+.add-functaionality{
+    background: rgba(5, 114, 143, 0.11) none repeat scroll 0 0;
+
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 33px;
     position: absolute;
-    width: 10%;
+    left:1%;
+    border: 0;
+    top: 15%;
+
+    width: 33px;
 }
