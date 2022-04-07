@@ -1,12 +1,14 @@
 import './UserData.css'
 import React from "react";
+import users from "../../DB";
 
-function UserData() {
+function UserData(id) {
+    console.log(id.id)
     return (
 
         <div className="userData">
             <img src="img2.jpg" style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>
-            <span className="position-absolute top-50 start-50 translate-middle">itay shwartz</span>
+            <span className="position-absolute top-50 start-50 translate-middle">itay</span>
 
             <button id="addConversation" type="button" className="btn btn-outline-light">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

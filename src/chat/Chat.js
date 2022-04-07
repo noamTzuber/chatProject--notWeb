@@ -12,13 +12,21 @@ import {useState} from "react";
 import RightSide from "./rightSide/RightSide";
 
 function Chat() {
-
+    function getIndex(){
+        const findIdEqualNum = /id=[\d]+/;
+        const findNum = /[\d]+/;
+        let semiResult = document.URL.match(findIdEqualNum)[0];
+        return semiResult.match(findNum)[0];
+    }
     const [currentTalk, setCurrentTalk]= useState({contact:'',lastMessage:'',lastTime:'',text:[]})
     const [currentMessages, setCurrentMessages]= useState([])
 
     const userList = users[0].chats.map((user, key) => {
         return < SummaryConversation{...user} setCurrentConversation={setCurrentTalk}  key={key}/>
     });
+
+
+    var id = getIndex();
 
     return (
         <div className='chatbox'>
@@ -27,7 +35,7 @@ function Chat() {
                 <div className="container">
                     <div className="section" id="left-section">
                         <div className="content">
-                            <UserData/>
+                            <UserData id={id}/>
                         </div>
                         <div className="scrollable-content" id="summary-conversation"
                              style={{marginTop: "1%", backgroundColor: "rgb(194 190 190 / 42%)"}}>
