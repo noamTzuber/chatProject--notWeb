@@ -8,20 +8,17 @@ import Outgoing from "./message/Outgoing";
 import Contact from "./Contact/Contact";
 import DB from "../DB";
 import users from "../DB";
+import {useState} from "react";
+import RightSide from "./rightSide/RightSide";
 
 function Chat() {
 
+    const [currentConversation, setCurrentConversation]= useState('')
+
     const userList = users.map((user, key) => {
-        return < SummaryConversation{...user} key={key}/>
+        return < SummaryConversation{...user} key={key} setCurrentConversation={setCurrentConversation} />
     });
-    const messageList = users[1].chats[0].text.map((src, key) => {
-        if (src.isIncoming === 0) {
-            return <Outgoing {...src} key={key}/>
-        }
 
-        return <IncomingMessage {...src} key={key}/>
-
-    });
     return (
         <div className='chatbox'>
 
@@ -40,19 +37,7 @@ function Chat() {
             </div>
 
             <div class="col-9">
-                <div className="right-container">
-                    <div className="section">
-                        <div className="content">
-                            <Contact/>
-                        </div>
-                        <div className='scrollable-content content' style={{backgroundColor: "rgb(194 190 190 / 42%)"}}>
-                            {messageList}
-                        </div>
-                    </div>
-                    <div className="content">
-                        <Btn/>
-                    </div>
-                </div>
+                <RightSide currentConversation = {currentConversation}/>
             </div>
 
         </div>
