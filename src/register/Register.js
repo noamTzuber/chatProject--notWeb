@@ -44,7 +44,7 @@ function Register() {
 
         if (errorMessage.innerHTML === "") {
             //push
-            window.location.href = '/Chat'  ;
+            window.location.href = '/Chat/1'  ;
         }
     }
 

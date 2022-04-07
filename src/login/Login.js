@@ -13,7 +13,7 @@ function Login() {
                 userExist =1;
 
         if(userExist)
-            window.location.href = '/Chat?' + i;
+            window.location.href = '/Chat/' + i;
         else{
             errorMessage.innerHTML = "Username or password incorrect";
         }
