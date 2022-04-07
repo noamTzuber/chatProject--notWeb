@@ -9,11 +9,13 @@ function Login() {
 
         let userExist = 0;
         for (var i = 0; i < users.length; i++)
-            if(users[i].name === name && users[i].password ===password)
+            if(users[i].name === name && users[i].password ===password){
                 userExist =1;
+                break;
+            }
 
         if(userExist)
-            window.location.href = '/Chat/' + i;
+            window.location.href = '/Chat/id=' + i;
         else{
             errorMessage.innerHTML = "Username or password incorrect";
         }
