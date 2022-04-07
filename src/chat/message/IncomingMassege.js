@@ -4,7 +4,6 @@ function IncomingMessage({txt,timeAndDate}) {
 
     var d = new Date();
     return (
-
         <div class="incoming">
             {txt}
             <div>

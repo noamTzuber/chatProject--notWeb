@@ -49,7 +49,6 @@ function Chat() {
                             {messageList}
                         </div>
                     </div>
-
                     <div className="content">
                         <Btn/>
                     </div>

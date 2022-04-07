@@ -4,7 +4,6 @@ function Outgoing({txt,timeAndDate}) {
 
     var d = new Date();
     return (
-
         <div class="Outgoing">
             {txt}
             <div>

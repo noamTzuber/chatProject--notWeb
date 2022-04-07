@@ -5,7 +5,6 @@ import Outgoing from '../message/Outgoing';
 function Conversation({text}) {
   return (
 
-
     <div className='conversation'>
         {text}
       </div>

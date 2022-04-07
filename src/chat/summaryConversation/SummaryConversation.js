@@ -17,7 +17,6 @@ function SummaryConversation({name, time, lastMessage}) {
                 </a>
             </div>
 
-
         </div>
 
 )

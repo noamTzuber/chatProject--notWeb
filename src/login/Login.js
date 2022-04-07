@@ -4,7 +4,6 @@ function Login() {
   return (
     <div id='form' className="position-absolute top-50 start-50 translate-middle">
       <span className="fs-1" style={{padding:'30px', display:'table', margin: '0 auto'}}>Login</span>
-
       <div className='inputAndTitle'>
         <div class="fs-6">Username</div>
         <input type="text" class="form-control" placeholder="Type your Username" aria-label="Email" aria-describedby="basic-addon1" />

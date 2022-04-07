@@ -4,7 +4,6 @@ function Btn() {
     function send() {
         let currentText = document.getElementById("current-text").value;
         console.log(currentText);
-
     }
     let d = new Date();
 

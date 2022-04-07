@@ -6,7 +6,6 @@ function UserData() {
         <div className="userData">
 
             <img src="img2.jpg" style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>
-
             <span class="position-absolute top-50 start-50 translate-middle">itay shwartz</span>
 
             <button id="addConversation" type="button" className="btn btn-outline-light">
