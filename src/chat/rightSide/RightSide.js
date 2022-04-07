@@ -19,11 +19,11 @@ function RightSide(props) {
         <div className="right-container">
             <div className="section">
                 <div className="content">
-                    <Contact/>
+                    <Contact name={props.currentConversation.contact} />
                 </div>
                 <div className='scrollable-content content' style={{backgroundColor: "rgb(194 190 190 / 42%)"}}>
-                    {console.log(props.currentConversation)}
-                    {props.currentConversation.map((src, key ) => {
+
+                    {props.currentConversation.text.map((src, key ) => {
                         if (src.isIncoming === 0) {
                             return <Outgoing {...src} key={key}/>
                         }
@@ -33,7 +33,7 @@ function RightSide(props) {
                 </div>
             </div>
             <div className="content">
-                <Btn/>
+                <Btn set={props.setMessages} contact={props.currentConversation.contact}/>
             </div>
         </div>
     )
