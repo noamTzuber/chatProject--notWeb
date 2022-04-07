@@ -34,6 +34,7 @@ function Chat() {
                     </div>
                 </div>
             </div>
+
             <div class="col-9">
                 <div className="left-container">
                     <div className="section">
@@ -45,6 +46,7 @@ function Chat() {
                             <Conversation/>
                         </div>
                     </div>
+
                     <div className="content">
                         <Btn/>
                     </div>
