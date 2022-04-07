@@ -13,16 +13,16 @@ import RightSide from "./rightSide/RightSide";
 
 function Chat() {
 
-    const [currentConversation, setCurrentConversation]= useState('')
+    const [currentTalk, setCurrentTalk]= useState([])
 
     const userList = users.map((user, key) => {
-        return < SummaryConversation{...user} key={key} setCurrentConversation={setCurrentConversation} />
+        return < SummaryConversation{...user} setCurrentConversation={setCurrentTalk}  key={key}/>
     });
 
     return (
         <div className='chatbox'>
 
-            <div class="col-3">
+            <div className="col-3">
                 <div className="container">
                     <div className="section" id="left-section">
                         <div className="content">
@@ -36,8 +36,8 @@ function Chat() {
                 </div>
             </div>
 
-            <div class="col-9">
-                <RightSide currentConversation = {currentConversation}/>
+            <div className="col-9">
+                <RightSide currentConversation = {currentTalk}/>
             </div>
 
         </div>

@@ -1,24 +1,24 @@
 import './SummaryConversation.css'
 import users from "../../DB";
 
+// {name, lastTime, lastMessage, setCurrentConversation}
+function SummaryConversation(props) {
 
-function SummaryConversation({name, lastTime, lastMessage, setCurrentConversation}) {
-
-    const showConversation = function (name){
-
-        setCurrentConversation('');
+    var showConversation = function (name){
+        console.log(users[1].chats[1].text);
+        props.setCurrentConversation(users[1].chats[1].text);
     }
     return (
         <div >
-            <div>
-                <a href="#" className="list-group-item list-group-item-action" onClick={showConversation(name)}>
+            <div onClick={() => {showConversation(props.name)}}>
+                <a href="#" className="list-group-item list-group-item-action" >
                     <div className="d-flex w-100 justify-content-between" >
-                        <h7 className="mb-1">{name}</h7>
-                        <small className="text-muted">{lastTime}</small>
+                        <h6 className="mb-1">{props.name}</h6>
+                        <small className="text-muted">{props.lastTime}</small>
                     </div>
 
                     <small className="text-muted" id="slast-ma">
-                        {lastMessage}</small>
+                        {props.lastMessage}</small>
                 </a>
             </div>
 

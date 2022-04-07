@@ -4,7 +4,7 @@ function Outgoing({txt,timeAndDate}) {
 
     var d = new Date();
     return (
-        <div class="Outgoing">
+        <div className="Outgoing">
             {txt}
             <div>
                 <small className="text-muted" id="slast-ma">

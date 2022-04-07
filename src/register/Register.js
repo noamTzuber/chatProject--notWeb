@@ -66,7 +66,7 @@ function Register() {
 
             <div className='inputAndTitle'>
                 <div className="fs-6">Confirm Password</div>
-                <input id='password-confirm' type="password" class="form-control" placeholder="Type your Password"/>
+                <input id='password-confirm' type="password" className="form-control" placeholder="Type your Password"/>
             </div>
             <div id='picterUpload' style={{marginLeft: '22%'}}>
                 <div className="fs-6">Upload profile picture</div>

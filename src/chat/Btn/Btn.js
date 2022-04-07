@@ -13,6 +13,8 @@ function Btn() {
         <div className='bottom-bar'>
             <div className="type_msg">
                 <div className="input_msg_write">
+
+
                     <input id="current-text" type="text" className="write_msg" placeholder="Type a message"/>
 
                     <button onClick={send} className="msg_send_btn" type="button">
