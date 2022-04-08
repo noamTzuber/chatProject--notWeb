@@ -13,7 +13,7 @@ function UserData(id) {
 
         return (
         <div className="userData">
-            <img src={profilePic} style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>
+            <img src={require("../../DB/profilePictures/dumbledore.jpg")} style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>
             <span className="position-absolute top-50 start-50 translate-middle">{name}</span>
 
             <button id="addConversation" type="button" className="btn btn-outline-light">
