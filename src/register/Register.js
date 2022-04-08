@@ -1,5 +1,5 @@
 import './Register.css'
-import {users} from "../DB";
+import {users} from "../DB/DB";
 
 function Register() {
 

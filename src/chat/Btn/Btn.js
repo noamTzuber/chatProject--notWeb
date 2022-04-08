@@ -1,5 +1,5 @@
 import './Btn.css'
-import users from "../../DB";
+import users from "../../DB/DB";
 
 function Btn(props) {
 

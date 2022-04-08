@@ -6,8 +6,8 @@ import Btn from "./Btn/Btn";
 import IncomingMessage from "./message/IncomingMassege";
 import Outgoing from "./message/Outgoing";
 import Contact from "./Contact/Contact";
-import DB from "../DB";
-import users from "../DB";
+import DB from "../DB/DB";
+import users from "../DB/DB";
 import {useState} from "react";
 import RightSide from "./rightSide/RightSide";
 

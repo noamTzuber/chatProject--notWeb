@@ -1,5 +1,5 @@
 import './Login.css'
-import {users} from "../DB";
+import {users} from "../DB/DB";
 
 function Login() {
     function varifyLogin() {

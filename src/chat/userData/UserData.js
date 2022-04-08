@@ -1,14 +1,20 @@
 import './UserData.css'
 import React from "react";
-import users from "../../DB";
+import users from "../../DB/DB";
 
 function UserData(id) {
-    console.log(id.id)
-    return (
+    console.log(id.id);
+    console.log(users[id.id].profilePic);
 
+    var profilePic = "../../DB/profilePictures/".concat("",users[id.id].profilePic);
+    console.log(profilePic)
+
+    var name = users[id.id].name;
+
+        return (
         <div className="userData">
-            <img src="img2.jpg" style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>
-            <span className="position-absolute top-50 start-50 translate-middle">itay</span>
+            <img src={profilePic} style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>
+            <span className="position-absolute top-50 start-50 translate-middle">{name}</span>
 
             <button id="addConversation" type="button" className="btn btn-outline-light">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

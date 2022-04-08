@@ -1,5 +1,5 @@
 import './SummaryConversation.css'
-import users from "../../DB";
+import users from "../../DB/DB";
 
 // {name, lastTime, lastMessage, setCurrentConversation}
 function SummaryConversation(props) {

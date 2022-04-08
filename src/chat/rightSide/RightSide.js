@@ -1,6 +1,6 @@
 import Contact from "../Contact/Contact";
 import Btn from "../Btn/Btn";
-import users from "../../DB";
+import users from "../../DB/DB";
 import Outgoing from "../message/Outgoing";
 import IncomingMessage from "../message/IncomingMassege";
 
