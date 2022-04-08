@@ -20,7 +20,7 @@
 }
 .type_msg {position: relative; }
 .msg_send_btn {
-    background: #05728f none repeat scroll 0 0;
+    background: rgba(5, 114, 143, 0.16) none repeat scroll 0 0;
     border: black;
     border-radius: 50%;
     color: #fff;
@@ -28,7 +28,7 @@
     font-size: 17px;
     height: 33px;
     position: absolute;
-    right:1.2%;
+    right:1.1%;
     border: 0;
     border: 1px solid rgba(7, 7, 7, 0.34);
     top: 15%;
@@ -62,9 +62,30 @@
 }
 
 
-.btn{
+.btn {
     box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0) !important;
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
 
+.btn-img {
+    color: #000000;
+    border: 0px;
+    background-color: transparent;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.upload-btn-wrapper input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
 }
 
 
