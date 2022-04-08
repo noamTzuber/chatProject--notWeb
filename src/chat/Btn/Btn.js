@@ -2,18 +2,23 @@ import './Btn.css'
 import users from "../../DB";
 
 function Btn(props) {
+
+    function openFunc() {
+        return 1;
+    }
+
     function send() {
         let currentText = document.getElementById("current-text").value;
-        if(currentText===''){
+        if (currentText === '') {
             return;
         }
         let d = new Date();
-        let time= (d.getHours()<10?'0':'')+d.getHours()+':'+(d.getMinutes()<10?'0':'')+d.getMinutes();
-        let date= d.getDay()+'.'+d.getMonth()+'.'+d.getFullYear();
+        let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
+        let date = d.getDay() + '.' + d.getMonth() + '.' + d.getFullYear();
         for (let i = 0; i < users[0].chats.length; i++) {
             if (props.contact === users[0].chats[i].contact) {
-                users[0].chats[i].text.push({txt: currentText,time:time+date ,isIncoming: 0});
-                props.set( users[0].chats[i].text.concat([]));
+                users[0].chats[i].text.push({txt: currentText, time: time + date, isIncoming: 0});
+                props.set(users[0].chats[i].text.concat([]));
 
             }
         }
@@ -22,39 +27,75 @@ function Btn(props) {
     }
 
 
-
     return (
 
         <div className='bottom-bar'>
-
             <div className="type_msg">
-
                 <div className="input_msg_write">
                     <input id="current-text" type="text" className="write_msg" placeholder="Type a message"/>
 
                     <span>
-                    <button onClick={() => {send(props.contact)}} className="msg_send_btn" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             className="bi bi-send" viewBox="0 0 16 16">
-                            <path
-                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
-                        </svg><i className="fa fa-paper-plane-o"
-                                                                      aria-hidden="true"></i></button>
+                    <button onClick={() => {
+                        send(props.contact)
+                    }} className="msg_send_btn" type="button">
+                        <i className="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                        <span>
+                             <div className="btn-group">
+  <button type="button" className="btn myfunction btn-prim " data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+    <i className="fa fa-paperclip" aria-hidden="true"></i>
+
+  </button>
+  <div className="dropdown-menu">
+      {/*  pic icon*/}
+    <a className="dropdown-item item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+  fill="currentColor" className="bi bi-images" viewBox="0 0 16 16">
+  <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path
+      d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2
+       0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1
+       0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .
+       577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/>
+</svg></a>
+      {/*  record icon*/}
+    <a className="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+fill="currentColor" className="bi bi-mic-fill" viewBox="0 0 16 16">
+  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path
+      d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5
+       4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+</svg></a>
+      {/*  video icon*/}
+    <a className="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+   fill="currentColor" className="bi bi-camera-reels-fill" viewBox="0 0 16 16">
+  <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+  <path
+      d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0
+      1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"/>
+</svg> </a>
+      {/*  gps icon*/}
+    <div className="dropdown-divider"></div>
+    <a className="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+   fill="currentColor" className="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+</svg></a>
+  </div>
+</div>
+                        </span>
                          </span>
                     <span>
-                    <button onClick={() => {send(props.contact)}} className="msg_send_btn" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             className="bi bi-send" viewBox="0 0 16 16">
-                            <path
-                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
-                        </svg><i className="fa fa-paper-plane-o"
-                                 aria-hidden="true"></i></button>
+                    {/*<button className="functionality" type="button">*/}
+                    {/* <i className="fa fa-paperclip fa" onClick={() => {*/}
+                    {/*     openFunc()}}></i></button>*/}
+                    {/*   */}
+
+
+
+
                          </span>
-
-
                 </div>
             </div>
         </div>
     );
 }
+
 export default Btn;

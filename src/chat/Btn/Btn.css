@@ -34,6 +34,22 @@
     top: 15%;
     width: 33px;
 }
+.functionality{
+    background: rgba(5, 114, 143, 0.46) none repeat scroll 0 0;
+    border: black;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 33px;
+    position: absolute;
+    right:5%;
+    border: 0;
+    border: 1px solid rgba(7, 7, 7, 0.34);
+    top: 15%;
+    width: 33px;
+
+}
 .input_msg_write input {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border:  0;
@@ -42,12 +58,18 @@
     font-size: 15px;
     min-height: 48px;
     width: 100%;
+    box-shadow: none;
+}
 
+
+.btn{
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0) !important;
 
 }
 
+
 .add-functaionality{
-    background: rgba(5, 114, 143, 0.11) none repeat scroll 0 0;
+    background: rgba(5, 114, 143, 0.24) none repeat scroll 0 0;
 
     border-radius: 50%;
     color: #fff;
@@ -60,4 +82,28 @@
     top: 15%;
 
     width: 33px;
+}
+
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.myfunction{
+    position: absolute !important;
+    top: -20px;
+    right: 50px;
+    margin-bottom:50px;
+    border-radius: 50%;
+    width: 10%;
+}
+
+.dropdown-menu{
+    min-width: 0px !important;
+    border-radius: 10px;
+    background-color: rgba(40, 44, 52, 0.47);
 }
