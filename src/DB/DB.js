@@ -1,8 +1,8 @@
 export const users = [{
     name: 'itay',
-    nickName: 'itay',
+    nickName: 'itayos',
     password: 'itay1234',
-    profilePic: "draco.jpg",
+    profilePic: "ron.jpg",
     chats: [
         {
             contact: 'harry',
@@ -41,6 +41,7 @@ export const users = [{
         }
     ]
 },
+
 
 ]
 export default users

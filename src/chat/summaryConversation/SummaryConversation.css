@@ -5,3 +5,14 @@
     position: relative;
     left:0;
 }
+
+#contactPic{
+    object-fit:contain;
+
+    width: 40%;
+    max-width: 20%;
+    border-radius: 50%;
+    clip-path: circle();
+    margin-top:1%;
+
+}
