@@ -7,44 +7,85 @@ function Register() {
         var errorMessage = document.getElementById("error-message");
         errorMessage.innerHTML = ""
 
-        let userName = document.getElementById("userName").value;
-        for(let i = 0; i < users.length; i++){
-            if(userName === users[i].name)
+        var newUserName = document.getElementById("userName").value;
+        for (let i = 0; i < users.length; i++) {
+            if (newUserName === users[i].name)
                 errorMessage.innerHTML = "Username already exist<br>"
         }
-        if (userName.length === 0) {
+        if (newUserName.length === 0) {
             errorMessage.innerHTML += "please enter Username<br>"
-        } else if (/[^a-zA-Z0-9]/.test(userName)) {
+        } else if (/[^a-zA-Z0-9]/.test(newUserName)) {
             errorMessage.innerHTML += "Use only English and numbers in Username<br>";
         }
 
-        let nickname = document.getElementById("nickname").value;
-        if (nickname.length === 0) {
+        let newNickname = document.getElementById("nickname").value;
+        if (newNickname.length === 0) {
             errorMessage.innerHTML += "please enter Nickname<br>"
-        } else if (/[^a-zA-Z0-9]/.test(nickname)) {
+        } else if (/[^a-zA-Z0-9]/.test(newNickname)) {
             errorMessage.innerHTML += "Use only English and numbers in Nickname<br>";
         }
 
 
-        let password = document.getElementById("password").value;
-        if (password.length < 8)
+        let newPassword = document.getElementById("password").value;
+        if (newPassword.length < 8)
             errorMessage.innerHTML += "Use 8 characters or more for your password<br>"
         else {
-            if (!/[0-9]/.test(password))
+            if (!/[0-9]/.test(newPassword))
                 errorMessage.innerHTML += "Use numbers for your password<br>"
-            if (!/[a-zA-Z]/.test(password))
+            if (!/[a-zA-Z]/.test(newPassword))
                 errorMessage.innerHTML += "Use letters for your password<br>"
 
-            if (/[^(a-zA-Z0-9)]/.test(password))
+            if (/[^(a-zA-Z0-9)]/.test(newPassword))
                 errorMessage.innerHTML += "Use only English and numbers for your password<br>"
 
-            if (document.getElementById("password-confirm").value !== password)
+            if (document.getElementById("password-confirm").value !== newPassword)
                 errorMessage.innerHTML += "the confirm password is not match<br>"
         }
 
         if (errorMessage.innerHTML === "") {
             //push
-            window.location.href = '/Chat/1'  ;
+
+
+            users.push({
+                name: newUserName, nickName: newNickname, password: newPassword,
+                chats: [
+                    {
+                        contact: 'noam',
+                        lastMessage: 'bye',
+                        lastTime: '9:00',
+                        text: [{txt: 'hey my name is noam', isIncoming: 0}, {txt: 'bye', isIncoming: 1}]
+                    },
+                    {
+                        contact: 'dvir',
+                        lastMessage: 'bye1',
+                        lastTime: '10:00',
+                        text: [{txt: 'hey my name is dvir', isIncoming: 0}, {txt: 'me', isIncoming: 1}]
+                    },
+                    {
+                        contact: 'inbal',
+                        lastMessage: 'bye2',
+                        lastTime: '11:00',
+                        text: [{txt: 'hey my name is inbal', isIncoming: 0}, {txt: 'me', isIncoming: 1}]
+                    },
+                    {
+                        contact: 'gilaad',
+                        lastMessage: 'byeGil',
+                        lastTime: '11:00',
+                        text: [{txt: 'hey my namr is gilad', isIncoming: 0}, {txt: 'me', isIncoming: 1}]
+                    },
+                    {
+                        contact: 'yehuda',
+                        lastMessage: 'bye2Ye',
+                        lastTime: '11:00',
+                        text: [{txt: 'hey my name is yehuda', isIncoming: 0}, {txt: 'me', isIncoming: 1}]
+                    }
+                ]
+            })
+            for (var i = 0; i < users.length; i++)
+                if (users[i].name === newUserName && users[i].password === newPassword)
+                    break;
+            console.log(i)
+            window.location.href = '/Chat/id=' + i;
         }
     }
 
