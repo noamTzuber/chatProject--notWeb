@@ -21,12 +21,22 @@ function Chat() {
     const [currentTalk, setCurrentTalk]= useState({contact:'',lastMessage:'',lastTime:'',text:[]})
     const [currentMessages, setCurrentMessages]= useState([])
 
-    const userList = users[0].chats.map((user, key) => {
-        return < SummaryConversation{...user} setCurrentConversation={setCurrentTalk}  key={key}/>
-    });
-
-
     var id = getIndex();
+
+    const userList = users[getIndex()].chats.map((users, key) => {
+        return < SummaryConversation{...users}  setCurrentConversation={setCurrentTalk}  key={key}/>
+    });
+    // function func1(){
+    //     var result = []
+    //     for(var i =0; i < users[id].chats.length;i++){
+    //         result[i] =<SummaryConversation {...users[id]} setCurrentConversation={setCurrentTalk}> </SummaryConversation>
+    //     }
+    //     return result;
+    // }
+    //
+    // const userList = func1();
+
+
 
     return (
         <div className='chatbox'>

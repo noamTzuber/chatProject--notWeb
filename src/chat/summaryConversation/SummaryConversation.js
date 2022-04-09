@@ -10,7 +10,7 @@ function SummaryConversation(props) {
             }
         }
     }
-
+    //const profilePic = require("../../DB/profilePictures/".concat("", users[0].chats[props.key].img));
     return (
         <div>
             <div onClick={() => {
@@ -19,7 +19,7 @@ function SummaryConversation(props) {
                 <a href="#" className="list-group-item list-group-item-action">
                     <div className="d-flex  justify-content-between">
 
-                        <img id="contactPic" src={require("../../DB/profilePictures/harry.jpg")}/>
+                        <img id="contactPic" src={require("../../DB/profilePictures/".concat("",users[0].chats[0].img))}/>
                         <h6 className="mb-1">{props.contact}</h6>
                         <small className="text-muted">{props.lastTime}</small>
 
