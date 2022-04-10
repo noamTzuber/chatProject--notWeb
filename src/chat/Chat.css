@@ -35,7 +35,6 @@
     position: absolute;
     top: 0;
     bottom: 0%;
-
     left: 0;
     display: flex;
     flex-direction: column;
@@ -51,7 +50,6 @@
     display: flex;
     flex-direction: column;
     left: 0;
-
     min-height: 0;
 }
 #left-section{
@@ -76,7 +74,6 @@
     backgroundColor: rgb(194 ,190 ,190 ,42%) !important;
     color: black;
     overflow: auto;
-    overflow-y: scroll;
     height:100%;
     overflow-x: hidden;
 

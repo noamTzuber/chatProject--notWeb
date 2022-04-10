@@ -58,7 +58,7 @@ function Chat() {
             </div>
 
             <div className="col-9">
-                <RightSide currentConversation = {currentTalk} setMessages ={setCurrentMessages}/>
+                <RightSide setContact={setContacts} currentConversation = {currentTalk} setMessages ={setCurrentMessages}/>
             </div>
 
         </div>

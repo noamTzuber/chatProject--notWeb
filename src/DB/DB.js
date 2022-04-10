@@ -9,7 +9,7 @@ export const users = [{
             img: "harry.jpg",
             lastMessage: 'bye',
             lastTime: '9:00',
-            text: [{txt: 'hey my name is noam', isIncoming: 0, time: "20:29"}, {txt: 'bye', isIncoming: 1 , time: "20:29"}]
+            text: [{txt: 'hey my name is noam', isIncoming: 0, time: "20:29"}, {txt: "./profilePictures/ron.jpg", isIncoming: 1 , time: "20:29"}]
         },
         {
             contact: 'hermione',
