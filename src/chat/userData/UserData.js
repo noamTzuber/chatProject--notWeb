@@ -11,22 +11,29 @@ function UserData(props) {
 
     function addUser() {
         var contactName = document.getElementById("inputAddUser").value;
-
         let exist = false;
+        let onMyContacts = false;
+
+        for(let j =0; j< users[props.id].chats.length;j++){
+            if(users[props.id].chats[j].contact === contactName){
+                onMyContacts = true;
+            }
+        }
 
         for(var i = 0; i < users.length;i++){
-            if (users.name === contactName){
+            if (users[i].name === contactName){
                 exist = true;
                 break
             }
         }
 
-        if(exist){
-            console.log("yes!")
+        if(exist && !onMyContacts){
             users[props.id].chats.push({contact: contactName, img: users[i].profilePic, lastMessage: "", lastTime: "", text: []})
             props.setContacts(users[props.id].chats.concat([]))
+            document.getElementById("myModal").modal('hide');
+            return 0;
+            //('#myModal').modal('hide');
         } else{
-            console.log("no!")
 
 
         }
@@ -71,10 +78,11 @@ function UserData(props) {
                         </div>
 
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-success" data-dismiss="modal" onClick={() => {
+
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-success" onClick={() => {
                                 addUser()
-                            }}>Add
-                            </button>
+                            }}>Save changes</button>
                         </div>
 
                     </div>
