@@ -26,24 +26,24 @@ function UserData(id) {
 
 
             {/*modal*/}
-            <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
+            <div className="modal fade" id="myModal">
+                <div className="modal-dialog">
+                    <div className="modal-content">
 
-                        <div class="modal-header">
-                            <h3 class="modal-title">Add user</h3>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div className="modal-header">
+                            <h3 className="modal-title">Add user</h3>
+                            <button type="button" className="close" data-dismiss="modal">&times;</button>
                         </div>
 
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <div className="input-group mb-3">
                                 <input type="text" className="form-control" placeholder="username"
                                        aria-label="username" aria-describedby="button-addon2"/>
                             </div>
                         </div>
 
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal">Add</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-success" data-dismiss="modal">Add</button>
                         </div>
 
                     </div>
