@@ -18,13 +18,13 @@ function Chat() {
         let semiResult = document.URL.match(findIdEqualNum)[0];
         return semiResult.match(findNum)[0];
     }
-    const [currentTalk, setCurrentTalk]= useState({contact:'',lastMessage:'',lastTime:'',text:[]})
+    const [currentTalk, setCurrentTalk]= useState({contact:'',lastMessage:'',lastTime:'',text:[], img:''})
     const [currentMessages, setCurrentMessages]= useState([])
 
     var id = getIndex();
 
     const userList = users[getIndex()].chats.map((users, key) => {
-        return < SummaryConversation{...users}  setCurrentConversation={setCurrentTalk}  key={key}/>
+        return < SummaryConversation{...users}  setCurrentConversation={setCurrentTalk} num ={key} key={key}/>
     });
     // function func1(){
     //     var result = []
