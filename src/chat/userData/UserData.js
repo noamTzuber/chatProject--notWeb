@@ -10,6 +10,7 @@ function UserData(props) {
     var nickname = users[props.id].nickName;
 
     function addUser() {
+
         var contactName = document.getElementById("inputAddUser").value;
         let exist = false;
         let onMyContacts = false;
@@ -61,7 +62,7 @@ function UserData(props) {
 
 
             {/*modal*/}
-            <div className="modal fade" id="myModal">
+            <div className="modal fade" id="myModal" >
                 <div className="modal-dialog">
                     <div className="modal-content">
 
