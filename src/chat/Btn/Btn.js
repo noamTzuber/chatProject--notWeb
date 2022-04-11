@@ -1,5 +1,6 @@
 import './Btn.css'
 import users from "../../DB/DB";
+import RecordAudio from "./RecordAudio";
 
 function Btn(props) {
 
@@ -31,8 +32,12 @@ function Btn(props) {
     return (
 
         <div className='bottom-bar'>
+
             <div className="type_msg">
+
+                <RecordAudio></RecordAudio>
                 <div className="input_msg_write">
+
                     <input id="current-text" type="text" className="write_msg" placeholder="Type a message"/>
 
                     <span>
