@@ -1,7 +1,7 @@
 import {useState} from "react";
 
-function RecordAudio() {
-    const [srcRec, setSrcRec] = useState('')
+function RecordAudio(props) {
+
 
     var recorder;
     const getAudio = async () => {
@@ -18,7 +18,7 @@ function RecordAudio() {
         recorder.onstop = (e) => {
             var blob = new Blob(chunks, {type: "audio/webm"});
             let testAudioRecord = URL.createObjectURL(blob);
-            setSrcRec(testAudioRecord);
+            props.setSrcRec(testAudioRecord);
             console.log(testAudioRecord);
         }
 
@@ -28,7 +28,7 @@ function RecordAudio() {
     };
     return (
         <div>
-            <audio controls src = {srcRec}></audio>
+            <audio  id="audioMes" controls src = {props.srcRec}></audio>
             <button onClick={()=>{
                 recorder.stop();
             }}>stop</button>

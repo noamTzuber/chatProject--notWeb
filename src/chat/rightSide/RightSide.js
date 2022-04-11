@@ -24,6 +24,7 @@ function RightSide(props) {
                 <div className='scrollable-content content' style={{backgroundColor: "rgb(194 190 190 / 42%)"}}>
 
                     {props.currentConversation.text.map((src, key ) => {
+
                         if (src.isIncoming === 0) {
                             return <Outgoing {...src} key={key}/>
                         }
