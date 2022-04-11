@@ -7,19 +7,26 @@ function Btn(props) {
     function openFunc() {
         return 1;
     }
+    function getPic(){
+
+    }
+
 
     function send() {
         let currentText = document.getElementById("current-text").value;
         if (currentText === '') {
             return;
         }
-        let d = new Date();
+        var d = new Date();
+        let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
         let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
-        let date = d.getDay() + '.' + d.getMonth() + '.' + d.getFullYear();
         for (let i = 0; i < users[0].chats.length; i++) {
             if (props.contact === users[0].chats[i].contact) {
+                users[0].chats[i].lastMessage=currentText;
+                users[0].chats[i].lastTime=time+' '+date;
                 users[0].chats[i].text.push({txt: currentText, time: time +" "+ date, isIncoming: 0});
                 props.set(users[0].chats[i].text.concat([]));
+                props.setLast(users[0].chats.concat([]));
 
             }
         }
@@ -56,18 +63,22 @@ function Btn(props) {
   <div className="dropdown-menu">
       {/*  pic icon*/}
     < button input type="file" accept="image/*" className="fs-6 dropdown-item item" >
-        <div  >
+    <div  >
 
-<div className="upload-btn-wrapper">
-  <button className="btn-img"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                   fill="currentColor" className="bi bi-image-fill" viewBox="0 0 16 16">
-
-        <path
-            d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
-</svg></button>
-  <input type="file" name="myfile"/>
-</div>
+            <div className="upload-btn-wrapper">
+            <button className="btn-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+               fill="currentColor" className="bi bi-image-fill" viewBox="0 0 16 16">
+                <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0
+                    1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0
+                     0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3
+                     .71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0
+                     1.5 1.5 0 0 0 3 0z"/>
+                </svg></button>
+              <input type="file" accept="image/*" id="img_submit" name="myfile"
+               onChange={()=>getPic()}/>
             </div>
+    </div>
 
 
 
