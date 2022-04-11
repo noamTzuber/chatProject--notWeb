@@ -12,6 +12,7 @@ function UserData(props) {
     function addUser() {
 
         var contactName = document.getElementById("inputAddUser").value;
+        document.getElementById("inputAddUser").value = '';
         let exist = false;
         let onMyContacts = false;
 
@@ -28,10 +29,11 @@ function UserData(props) {
             }
         }
 
+
         if(exist && !onMyContacts){
             users[props.id].chats.push({contact: contactName, img: users[i].profilePic, lastMessage: "", lastTime: "", text: []})
             props.setContacts(users[props.id].chats.concat([]))
-            document.getElementById("myModal").modal('hide');
+            document.getElementById("closeButtonModal").onclick();
             return 0;
             //('#myModal').modal('hide');
         } else{
@@ -80,7 +82,7 @@ function UserData(props) {
 
                         <div className="modal-footer">
 
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button id = "closeButtonModal" type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-success" onClick={() => {
                                 addUser()
                             }}>Save changes</button>
