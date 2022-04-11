@@ -9,12 +9,39 @@ function UserData(props) {
 
     var nickname = users[props.id].nickName;
 
-    function addUser(){
-         var contactName = document.getElementById("inputAddUser").value;
-        // var contactPic = "ron.jpg"
-        users[props.id].chats.push({contact:contactName, img:"ron.jpg", lastMessage:"", lastTime:"", text:[]})
-        console.log(users[props.id].chats)
-        props.setContacts(users[props.id].chats.concat([]))
+    function addUser() {
+
+        var contactName = document.getElementById("inputAddUser").value;
+        document.getElementById("inputAddUser").value = '';
+        let exist = false;
+        let onMyContacts = false;
+
+        for(let j =0; j< users[props.id].chats.length;j++){
+            if(users[props.id].chats[j].contact === contactName){
+                onMyContacts = true;
+            }
+        }
+
+        for(var i = 0; i < users.length;i++){
+            if (users[i].name === contactName){
+                exist = true;
+                break
+            }
+        }
+
+
+        if(exist && !onMyContacts){
+            users[props.id].chats.push({contact: contactName, img: users[i].profilePic, lastMessage: "", lastTime: "", text: []})
+            props.setContacts(users[props.id].chats.concat([]))
+            document.getElementById("closeButtonModal").onclick();
+            return 0;
+            //('#myModal').modal('hide');
+        } else{
+
+
+        }
+
+
 
 
     }
@@ -26,7 +53,7 @@ function UserData(props) {
             <span className="position-absolute top-50 start-50 translate-middle">{nickname}</span>
 
             <button id="addConversation" type="button" className="btn btn-outline-light" data-toggle="modal"
-                    data-target="#myModal" >
+                    data-target="#myModal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      className="bi bi-person-plus-fill" viewBox="0 0 16 16">
                     <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -37,7 +64,7 @@ function UserData(props) {
 
 
             {/*modal*/}
-            <div className="modal fade" id="myModal">
+            <div className="modal fade" id="myModal" >
                 <div className="modal-dialog">
                     <div className="modal-content">
 
@@ -48,13 +75,17 @@ function UserData(props) {
 
                         <div className="modal-body">
                             <div className="input-group mb-3">
-                                <input id = "inputAddUser" type="text" className="form-control" placeholder="username"
+                                <input id="inputAddUser" type="text" className="form-control" placeholder="username"
                                        aria-label="username" aria-describedby="button-addon2"/>
                             </div>
                         </div>
 
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-success" data-dismiss="modal" onClick={()=>{addUser()}} >Add</button>
+
+                            <button id = "closeButtonModal" type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-success" onClick={() => {
+                                addUser()
+                            }}>Save changes</button>
                         </div>
 
                     </div>
