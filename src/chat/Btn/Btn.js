@@ -132,18 +132,19 @@ function Btn(props) {
                 <div className="modal-dialog">
                     <div className="modal-content">
 
-                        <div className="modal-header">
-                            <h3 className="modal-title">Add user</h3>
-                            <button type="button" className="close" data-dismiss="modal">&times;</button>
+                        <div className="modal-header" style={{padding:"3px"}}>
+                            <h3 className="modal-title" style={{padding:"5px"}}>Rec</h3>
+                            <button type="button" className="close"  style={{padding:"1px",border:"0",
+                                backgroundColor: "transparent"}} data-dismiss="modal">&times;</button>
                         </div>
 
-                        <div className="modal-body">
-                            <div id="audioMes" >
+                        <div className="modal-body" style={{padding:"3px"}}>
+                            <div id="audioMes"  >
                             <RecordAudio srcRec={srcRec} setSrcRec={setSrcRec}></RecordAudio>
                             </div>
                         </div>
 
-                        <div className="modal-footer">
+                        <div className="modal-footer" style={{padding:"3px"}}>
                             <button type="button" className="btn btn-success" onClick={ sendAudio}>Send</button>
 
 
