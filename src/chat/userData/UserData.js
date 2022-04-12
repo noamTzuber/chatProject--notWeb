@@ -2,14 +2,20 @@ import './UserData.css'
 import React from "react";
 import users from "../../DB/DB";
 
+import {useState} from "react";
+
 
 function UserData(props) {
+
+
 
     const profilePic = require("../../DB/profilePictures/".concat("", users[props.id].profilePic));
 
     var nickname = users[props.id].nickName;
 
     function addUser() {
+        document.getElementById("addUserErrorMessage").innerHTML = "";
+
 
         var contactName = document.getElementById("inputAddUser").value;
         document.getElementById("inputAddUser").value = '';
@@ -30,15 +36,13 @@ function UserData(props) {
         }
 
 
-        if(exist && !onMyContacts){
+        if(exist && !onMyContacts && contactName !== users[props.id].name){
             users[props.id].chats.push({contact: contactName, img: users[i].profilePic, lastMessage: "", lastTime: "", text: []})
             props.setContacts(users[props.id].chats.concat([]))
             document.getElementById("closeButtonModal").onclick();
-            return 0;
-            //('#myModal').modal('hide');
+
         } else{
-
-
+            document.getElementById("addUserErrorMessage").innerHTML = "Invalid UserName";
         }
 
 
@@ -78,6 +82,7 @@ function UserData(props) {
                                 <input id="inputAddUser" type="text" className="form-control" placeholder="username"
                                        aria-label="username" aria-describedby="button-addon2"/>
                             </div>
+                            <div id = "addUserErrorMessage" style={{color :"red"}}></div>
                         </div>
 
                         <div className="modal-footer">
@@ -85,7 +90,7 @@ function UserData(props) {
                             <button id = "closeButtonModal" type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-success" onClick={() => {
                                 addUser()
-                            }}>Save changes</button>
+                            }}>Add User</button>
                         </div>
 
                     </div>
