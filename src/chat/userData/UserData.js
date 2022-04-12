@@ -37,7 +37,7 @@ function UserData(props) {
         if(exist && !onMyContacts && contactName !== users[props.id].name){
             users[props.id].chats.push({contact: contactName, img: users[i].profilePic, lastMessage: "", lastTime: "", text: []})
             props.setContacts(users[props.id].chats.concat([]))
-            document.getElementById("closeButtonModal").onclick();
+            document.getElementById("closeButtonModal").click();
 
         } else{
             document.getElementById("addUserErrorMessage").innerHTML = "Invalid UserName";
@@ -55,7 +55,7 @@ function UserData(props) {
             <div style={{backgroundImage: `url(${profilePic})`, backgroundSize:"cover", width:"70px", height:"70px", clipPath: "circle()", backgroundPosition: "center center", marginLeft:"3%"}}></div>
             {/*<img src={profilePic} style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>*/}
 
-            <span className="position-absolute top-50 start-50 translate-middle">{nickname}</span>
+            <span className="position-absolute top-50 start-50 translate-middle" style={{fontSize:"170%"}}>{nickname}</span>
 
             <button id="addConversation" type="button" className="btn btn-outline-light" data-toggle="modal"
                     data-target="#myModal" style={{position:"absolute", top:"20%", right:"0%"}}>
@@ -75,7 +75,8 @@ function UserData(props) {
 
                         <div className="modal-header">
                             <h3 className="modal-title">Add user</h3>
-                            <button type="button" className="close" data-dismiss="modal">&times;</button>
+                            <button id = "closeButtonModal" type="button" className="close" data-dismiss="modal"  style={{padding:"1px",border:"0",
+                                backgroundColor: "transparent"}}>&times;</button>
                         </div>
 
                         <div className="modal-body">
@@ -88,7 +89,6 @@ function UserData(props) {
 
                         <div className="modal-footer">
 
-                            <button id = "closeButtonModal" type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-success" onClick={() => {
                                 addUser()
                             }}>Add User</button>

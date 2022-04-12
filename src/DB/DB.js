@@ -2,7 +2,7 @@ export const users = [{
     name: 'itay',
     nickName: 'itayos',
     password: 'itay1234',
-    profilePic: "ron.jpg",
+    profilePic: "dobby.jpg",
     chats: [
         {
             contact: 'harry',

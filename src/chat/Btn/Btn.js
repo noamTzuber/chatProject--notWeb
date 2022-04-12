@@ -6,12 +6,33 @@ import VideoRecord from "./VideoRecord";
 
 function Btn(props) {
 
-
-    function getPic(){
-
-    }
     const [srcRec, setSrcRec] = useState('')
     const [srcVid, setSrcVid] = useState('')
+
+    function uploadImg(){
+        let img = document.getElementById("img_submit");
+        let imgURL = document.getElementById("img_submit").value;
+        if(imgURL.length > 0){
+            let fReader = new FileReader()
+            fReader.readAsDataURL(img.files[0])
+            fReader.onloadend = function(event){
+                var path = event.target.result;
+                var d = new Date();
+                let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
+                let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
+                for (let i = 0; i < users[props.id].chats.length; i++) {
+                    if (props.contact === users[props.id].chats[i].contact) {
+                        users[props.id].chats[i].lastMessage="img";
+                        users[props.id].chats[i].lastTime=time+' '+date;
+                        users[props.id].chats[i].text.push({txt: path, time: time +" "+ date, isIncoming: 0,type:"img"});
+                        props.set(users[props.id].chats[i].text.concat([]));
+                        props.setLast(users[props.id].chats.concat([]));
+                    }
+                }
+            }
+        }
+        img.value = "";
+    }
 
 
     function send(type) {
@@ -94,8 +115,9 @@ function Btn(props) {
                                   aria-expanded="false"><i className="fa fa-paperclip" aria-hidden="true"></i>
                             </button>
                             <div className="dropdown-menu">
-                            {/*  pic icon*/}
-                               <button input type="file" accept="image/*" className="fs-6 dropdown-item item" >
+                {/*  pic icon*/}
+                               <button input type="file" accept="image/*" className="fs-6 dropdown-item item" data-toggle="modal"
+                                       data-target="#img-modal">
                                <div>
                                    <div className="upload-btn-wrapper">
                                       <button className="btn-img">
@@ -108,11 +130,11 @@ function Btn(props) {
                                              1.5 1.5 0 0 0 3 0z"/>
                                         </svg>
                                       </button>
-                                        <input type="file" accept="image/*" id="img_submit" name="myfile" onChange={()=>getPic()}/>
+
                                    </div>
                                </div>
                                </button>
-                                 {/*  record icon*/}
+                {/*  record icon*/}
                                 <button  className="dropdown-item "  href="#" data-toggle="modal"
                                     data-target="#record-modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" className="bi bi-mic-fill" viewBox="0 0 16 16">
@@ -194,6 +216,31 @@ function Btn(props) {
                         </div>
 
                         <div className="modal-footer" style={{padding:"3px"}}>
+                            <button type="button" className="btn btn-success" onClick={ sendVid}>Send</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div className="modal fade" id="img-modal" >
+                <div className="modal-dialog">
+                    <div className="modal-content">
+
+                        <div className="modal-header" style={{padding:"3px"}}>
+                            <h3 className="modal-title" style={{padding:"5px"}}>Picture</h3>
+                            <button type="button" className="close"  style={{padding:"1px",border:"0",
+                                backgroundColor: "transparent"}} data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div className="modal-body" style={{padding:"3px"}}>
+                            <input type="file" accept="image/*" id="img_submit" name="myfile" onChange={uploadImg} />
+                        </div>
+
+                        <div className="modal-footer" style={{padding:"3px"}}>
+                            <button id = "closeButtonModal" type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+
                             <button type="button" className="btn btn-success" onClick={ sendVid}>Send</button>
 
                         </div>

@@ -11,6 +11,16 @@ function SummaryConversation(props) {
         }
     }
     //const profilePic = require("../../DB/profilePictures/".concat("", users[0].chats[props.key].img));
+    var lastMessage;
+    function shortLastMessage(){
+        let maxSize = 25;
+        if(props.lastMessage.length < maxSize){
+            return props.lastMessage;
+        }
+        return props.lastMessage.substring(0,maxSize).concat('',"...");
+
+    }
+
 
     var pic = require("../../DB/profilePictures/".concat("",users[0].chats[props.num].img));
     return (
@@ -21,45 +31,26 @@ function SummaryConversation(props) {
                 <a href="#" className="list-group-item list-group-item-action">
                     <div className="row">
                         <div className="col-3">
-
-                                <div style={{backgroundImage: `url(${pic})`, backgroundSize:"cover", width:"50px", height:"50px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center"}}></div>
-                                {/*<img className="pic" id="contactPic" src={require("../../DB/profilePictures/".concat("",users[0].chats[props.num].img))}/>*/}
+                            <div style={{backgroundImage: `url(${pic})`, backgroundSize:"cover", width:"50px", height:"50px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center"}}></div>
                         </div>
                         <div className="col-9">
 
                             <div>
-                                <span>{props.contact}</span>
-                                <span  style={{fontSize:"70%", color:"black !important" }}>{props.lastTime}</span>
+                                <span style={{fontSize:"120%"}}>{props.contact}</span>
+                                <span className="position-absolute top-0 end-0" style={{fontSize:"70%", color:"black !important", margin:"4%"}}>{props.lastTime}</span>
                             </div>
 
                             <div>
-                                <span>{props.lastMessage}</span>
+                                <span style={{color:"darkgray"}}>{shortLastMessage()}</span>
                             </div>
 
                         </div>
 
                     </div>
-
-
-
-
-
-                    {/*<div className="d-flex  justify-content-between">*/}
-
-                    {/*    <img className="pic" id="contactPic" src={require("../../DB/profilePictures/".concat("",users[0].chats[props.num].img))}/>*/}
-                    {/*    <h6 className="mb-1">{props.contact}</h6>*/}
-                    {/*    <small  style={{fontSize:"70%", color:"black !important" }}>{props.lastTime}</small>*/}
-
-                    {/*</div>*/}
-                    {/*<small className="text-muted" id="slast-ma" style={{textOverflow: "ellipsis \" [..]\";"}}>*/}
-                    {/*    {props.lastMessage}</small>*/}
                 </a>
             </div>
-
         </div>
-
     )
-        ;
 }
 
 export default SummaryConversation
