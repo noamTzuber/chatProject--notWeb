@@ -11,21 +11,48 @@ function SummaryConversation(props) {
         }
     }
     //const profilePic = require("../../DB/profilePictures/".concat("", users[0].chats[props.key].img));
+
+    var pic = require("../../DB/profilePictures/".concat("",users[0].chats[props.num].img));
     return (
         <div>
             <div onClick={() => {
                 showConversation(props.contact)
             }}>
                 <a href="#" className="list-group-item list-group-item-action">
-                    <div className="d-flex  justify-content-between">
+                    <div className="row">
+                        <div className="col-3">
 
-                        <img className="pic" id="contactPic" src={require("../../DB/profilePictures/".concat("",users[0].chats[props.num].img))}/>
-                        <h6 className="mb-1">{props.contact}</h6>
-                        <small  style={{fontSize:"70%", color:"black !important" }}>{props.lastTime}</small>
+                                <div style={{backgroundImage: `url(${pic})`, backgroundSize:"cover", width:"50px", height:"50px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center"}}></div>
+                                {/*<img className="pic" id="contactPic" src={require("../../DB/profilePictures/".concat("",users[0].chats[props.num].img))}/>*/}
+                        </div>
+                        <div className="col-9">
+
+                            <div>
+                                <span>{props.contact}</span>
+                                <span  style={{fontSize:"70%", color:"black !important" }}>{props.lastTime}</span>
+                            </div>
+
+                            <div>
+                                <span>{props.lastMessage}</span>
+                            </div>
+
+                        </div>
 
                     </div>
-                    <small className="text-muted" id="slast-ma" style={{textOverflow: "ellipsis \" [..]\";"}}>
-                        {props.lastMessage}</small>
+
+
+
+
+
+                    {/*<div className="d-flex  justify-content-between">*/}
+
+                    {/*    <img className="pic" id="contactPic" src={require("../../DB/profilePictures/".concat("",users[0].chats[props.num].img))}/>*/}
+                    {/*    <h6 className="mb-1">{props.contact}</h6>*/}
+                    {/*    <small  style={{fontSize:"70%", color:"black !important" }}>{props.lastTime}</small>*/}
+
+                    {/*</div>*/}
+                    {/*<small className="text-muted" id="slast-ma" style={{textOverflow: "ellipsis \" [..]\";"}}>*/}
+                    {/*    {props.lastMessage}</small>*/}
                 </a>
             </div>
 

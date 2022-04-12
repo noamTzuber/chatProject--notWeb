@@ -7,14 +7,6 @@ import IncomingMessage from "../message/IncomingMassege";
 function RightSide(props) {
 
 
-    // const messageList = props.currentConversation.map((src, key ) => {
-    //     if (src.isIncoming === 0) {
-    //         return <Outgoing {...src} key={key}/>
-    //     }
-    //     return <IncomingMessage {...src} key={key}/>
-    //
-    // });
-
     return (
         <div className="right-container">
             <div className="section">
@@ -34,7 +26,7 @@ function RightSide(props) {
                 </div>
             </div>
             <div className="content">
-                <Btn setLast ={props.setContact} set={props.setMessages} contact={props.currentConversation.contact}/>
+                <Btn setLast ={props.setContact} set={props.setMessages} contact={props.currentConversation.contact} id = {props.id}/>
             </div>
         </div>
     )
