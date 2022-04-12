@@ -22,13 +22,13 @@ function Btn(props) {
         var d = new Date();
         let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
         let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
-        for (let i = 0; i < users[0].chats.length; i++) {
-            if (props.contact === users[0].chats[i].contact) {
-                users[0].chats[i].lastMessage=currentText;
-                users[0].chats[i].lastTime=time+' '+date;
-                users[0].chats[i].text.push({txt: currentText, time: time +" "+ date, isIncoming: 0,type:type});
-                props.set(users[0].chats[i].text.concat([]));
-                props.setLast(users[0].chats.concat([]));
+        for (let i = 0; i < users[props.id].chats.length; i++) {
+            if (props.contact === users[props.id].chats[i].contact) {
+                users[props.id].chats[i].lastMessage=currentText;
+                users[props.id].chats[i].lastTime=time+' '+date;
+                users[props.id].chats[i].text.push({txt: currentText, time: time +" "+ date, isIncoming: 0,type:type});
+                props.set(users[props.id].chats[i].text.concat([]));
+                props.setLast(users[props.id].chats.concat([]));
 
             }
         }
@@ -43,13 +43,13 @@ function Btn(props) {
         var d = new Date();
         let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
         let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
-        for (let i = 0; i < users[0].chats.length; i++) {
-            if (props.contact === users[0].chats[i].contact) {
-                users[0].chats[i].lastMessage=srcRec;
-                users[0].chats[i].lastTime=time+' '+date;
-                users[0].chats[i].text.push({txt: srcRec, time: time +" "+ date, isIncoming: 0,type:"audio"});
-                props.set(users[0].chats[i].text.concat([]));
-                props.setLast(users[0].chats.concat([]));
+        for (let i = 0; i < users[props.id].chats.length; i++) {
+            if (props.contact === users[props.id].chats[i].contact) {
+                users[props.id].chats[i].lastMessage="audio";
+                users[props.id].chats[i].lastTime=time+' '+date;
+                users[props.id].chats[i].text.push({txt: srcRec, time: time +" "+ date, isIncoming: 0,type:"audio"});
+                props.set(users[props.id].chats[i].text.concat([]));
+                props.setLast(users[props.id].chats.concat([]));
 
             }
         }
@@ -63,13 +63,13 @@ function Btn(props) {
         var d = new Date();
         let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
         let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
-        for (let i = 0; i < users[0].chats.length; i++) {
-            if (props.contact === users[0].chats[i].contact) {
-                users[0].chats[i].lastMessage=srcVid;
-                users[0].chats[i].lastTime=time+' '+date;
-                users[0].chats[i].text.push({txt: srcVid, time: time +" "+ date, isIncoming: 0,type:"video"});
-                props.set(users[0].chats[i].text.concat([]));
-                props.setLast(users[0].chats.concat([]));
+        for (let i = 0; i < users[props.id].chats.length; i++) {
+            if (props.contact === users[props.id].chats[i].contact) {
+                users[props.id].chats[i].lastMessage="video";
+                users[props.id].chats[i].lastTime=time+' '+date;
+                users[props.id].chats[i].text.push({txt: srcVid, time: time +" "+ date, isIncoming: 0,type:"video"});
+                props.set(users[props.id].chats[i].text.concat([]));
+                props.setLast(users[props.id].chats.concat([]));
 
             }
         }
