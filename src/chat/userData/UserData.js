@@ -2,8 +2,6 @@ import './UserData.css'
 import React from "react";
 import users from "../../DB/DB";
 
-import {useState} from "react";
-
 
 function UserData(props) {
 
@@ -50,14 +48,17 @@ function UserData(props) {
 
     }
 
+
+
     return (
         <div className="userData">
-            <img src={profilePic} style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>
+            <div style={{backgroundImage: `url(${profilePic})`, backgroundSize:"cover", width:"70px", height:"70px", clipPath: "circle()", backgroundPosition: "center center", marginLeft:"3%"}}></div>
+            {/*<img src={profilePic} style={{width: "17%", borderRadius: "50%", clipPath: "circle()"}}/>*/}
 
             <span className="position-absolute top-50 start-50 translate-middle">{nickname}</span>
 
             <button id="addConversation" type="button" className="btn btn-outline-light" data-toggle="modal"
-                    data-target="#myModal">
+                    data-target="#myModal" style={{position:"absolute", top:"20%", right:"0%"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      className="bi bi-person-plus-fill" viewBox="0 0 16 16">
                     <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
