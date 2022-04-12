@@ -26,7 +26,7 @@ function Chat() {
 
 
     const userList = contacts.map((users, key) => {
-        return < SummaryConversation{...users}  setCurrentConversation={setCurrentTalk} num ={key} key={key}/>
+        return < SummaryConversation{...users}  setCurrentConversation={setCurrentTalk} id = {id} num ={key} key={key}/>
     });
     // function func1(){
     //     var result = []
@@ -58,7 +58,7 @@ function Chat() {
             </div>
 
             <div className="col-9">
-                <RightSide setContact={setContacts} currentConversation = {currentTalk} setMessages ={setCurrentMessages}/>
+                <RightSide setContact={setContacts} currentConversation = {currentTalk} setMessages ={setCurrentMessages} id = {id}/>
             </div>
 
         </div>
