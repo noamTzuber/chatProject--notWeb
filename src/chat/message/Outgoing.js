@@ -15,17 +15,29 @@ function Outgoing({txt,time,type}) {
             </div>
     );
         }
-    if(type==="audio"){
+    if(type==="audio") {
 
-    return(
-        <div className="Outgoing">
-        <audio    style={{width: "-webkit-fill-available"}}  controls src = {txt}/>
-            <div>
-            <small style={{fontSize: "70%"}} className="text-muted" id="slast-ma">
-                {time}</small>
-    </div>
-        </div>
+        return (
+            <div className="Outgoing">
+                <audio style={{width: "-webkit-fill-available"}} controls src={txt}/>
+                <div>
+                    <small style={{fontSize: "70%"}} className="text-muted" id="slast-ma">
+                        {time}</small>
+                </div>
+            </div>
         );
+    }
+        if(type==="video"){
+
+            return(
+                <div className="Outgoing">
+                    <video    style={{width: "-webkit-fill-available"}}  controls src = {txt}/>
+                    <div>
+                        <small style={{fontSize: "70%"}} className="text-muted" id="slast-ma">
+                            {time}</small>
+                    </div>
+                </div>
+            );
     }
 
 
