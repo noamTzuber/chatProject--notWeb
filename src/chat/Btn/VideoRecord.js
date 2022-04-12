@@ -2,14 +2,11 @@ import {useState} from "react";
 
 function RecordAudio(props) {
 
-
-        var recorder;
+    var recorder;
     const getVideo = async () => {
         let chunks = [];
-
-
-        //wait for the stream promise to resolve
-        let stream = await navigator.mediaDevices.getUserMedia({ video: true});
+       //wait for the stream promise to resolve
+        let stream = await navigator.mediaDevices.getUserMedia({audio:true, video: true});
         recorder = new MediaRecorder(stream);
         recorder.ondataavailable = (e) => {
             chunks.push(e.data);
