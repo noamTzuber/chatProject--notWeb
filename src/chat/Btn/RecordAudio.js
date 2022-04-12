@@ -24,7 +24,6 @@ function RecordAudio(props) {
 
         recorder.start();
 
-
     };
     return (
         <div>

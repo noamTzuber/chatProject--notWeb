@@ -2,16 +2,16 @@ import './Btn.css'
 import users from "../../DB/DB";
 import RecordAudio from "./RecordAudio";
 import React, {useState} from "react";
+import VideoRecord from "./VideoRecord";
 
 function Btn(props) {
 
-    function openFunc() {
-        return <RecordAudio></RecordAudio>
-    }
+
     function getPic(){
 
     }
     const [srcRec, setSrcRec] = useState('')
+    const [srcVid, setSrcVid] = useState('')
 
 
     function send(type) {
@@ -54,6 +54,26 @@ function Btn(props) {
             }
         }
         setSrcRec("");
+
+    }
+    function sendVid() {// let currentText = document.getElementById("audioMes").value;
+        if (srcVid === '') {
+            return;
+        }
+        var d = new Date();
+        let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
+        let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
+        for (let i = 0; i < users[0].chats.length; i++) {
+            if (props.contact === users[0].chats[i].contact) {
+                users[0].chats[i].lastMessage=srcVid;
+                users[0].chats[i].lastTime=time+' '+date;
+                users[0].chats[i].text.push({txt: srcVid, time: time +" "+ date, isIncoming: 0,type:"video"});
+                props.set(users[0].chats[i].text.concat([]));
+                props.setLast(users[0].chats.concat([]));
+
+            }
+        }
+        setSrcVid("");
 
     }
 
@@ -104,7 +124,8 @@ function Btn(props) {
 
 
       {/*  video icon*/}
-    <button className="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                <button  className="dropdown-item "  href="#" data-toggle="modal"
+                                         data-target="#vid-modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
            fill="currentColor" className="bi bi-camera-reels-fill" viewBox="0 0 16 16">
           <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
           <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
@@ -153,7 +174,37 @@ function Btn(props) {
                     </div>
                 </div>
             </div>
+
+
+
+            <div className="modal fade" id="vid-modal" >
+                <div className="modal-dialog">
+                    <div className="modal-content">
+
+                        <div className="modal-header" style={{padding:"3px"}}>
+                            <h3 className="modal-title" style={{padding:"5px"}}>Rec</h3>
+                            <button type="button" className="close"  style={{padding:"1px",border:"0",
+                                backgroundColor: "transparent"}} data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div className="modal-body" style={{padding:"3px"}}>
+                            <div id="vidMes"  >
+                                <VideoRecord srcVid={srcVid} setSrcRec={setSrcVid}></VideoRecord>
+                            </div>
+                        </div>
+
+                        <div className="modal-footer" style={{padding:"3px"}}>
+                            <button type="button" className="btn btn-success" onClick={ sendVid}>Send</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+
 
     );
 }
