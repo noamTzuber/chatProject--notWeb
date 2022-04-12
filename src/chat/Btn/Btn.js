@@ -30,6 +30,8 @@ function Btn(props) {
                     }
                 }
             }
+            document.getElementById("closeButtonImgModal").click();
+
         }
         img.value = "";
     }
@@ -240,7 +242,7 @@ function Btn(props) {
 
                         <div className="modal-header" style={{padding:"3px"}}>
                             <h3 className="modal-title" style={{padding:"5px"}}>Picture</h3>
-                            <button type="button" className="close"  style={{padding:"1px",border:"0",
+                            <button type="button" className="close" id = "closeButtonImgModal" style={{padding:"1px",border:"0",
                                 backgroundColor: "transparent"}} data-dismiss="modal">&times;</button>
                         </div>
 
@@ -249,7 +251,6 @@ function Btn(props) {
                         </div>
 
                         <div className="modal-footer" style={{padding:"3px"}}>
-                            <button id = "closeButtonModal" type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
 
                             <button type="button" className="btn btn-success" onClick={ sendVid}>Send</button>
 
