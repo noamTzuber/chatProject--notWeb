@@ -19,7 +19,7 @@ function Outgoing({txt,time,type}) {
 
     return(
         <div className="Outgoing">
-        <audio controls src = {txt}/>
+        <audio    style={{width: "-webkit-fill-available"}}  controls src = {txt}/>
             <div>
             <small style={{fontSize: "70%"}} className="text-muted" id="slast-ma">
                 {time}</small>
