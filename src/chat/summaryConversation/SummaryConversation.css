@@ -9,12 +9,13 @@
 #contactPic {
 
     object-fit: contain;
-    width: 40%;
-    max-width: 20%;
-    min-width: 19%;
     border-radius: 50%;
     clip-path: circle();
+    width: 40%;
+    max-width: 20%;
     margin-top: 1%;
+    /*width: 12vw;*/
+    /*height: 12vh;*/
 }
 
 
