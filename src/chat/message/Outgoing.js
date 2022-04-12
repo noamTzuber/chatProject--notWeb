@@ -2,6 +2,19 @@ import './Outgoing.css'
 
 function Outgoing({txt,time,type}) {
 
+    if(type==="img") {
+
+        return (
+            <div className="Outgoing">
+                <img style={{width: "-webkit-fill-available"}} controls src={txt}/>
+                <div>
+                    <small style={{fontSize: "70%"}} className="text-muted" id="slast-ma">
+                        {time}</small>
+                </div>
+            </div>
+        );
+    }
+
 
     if(type==="txt")
     {
@@ -27,21 +40,19 @@ function Outgoing({txt,time,type}) {
             </div>
         );
     }
-        if(type==="video"){
+        if(type==="video") {
 
-            return(
+            return (
                 <div className="Outgoing">
-                    <video    style={{width: "-webkit-fill-available"}}  controls src = {txt}/>
+                    <video style={{width: "-webkit-fill-available"}} controls src={txt}/>
                     <div>
                         <small style={{fontSize: "70%"}} className="text-muted" id="slast-ma">
                             {time}</small>
                     </div>
                 </div>
             );
-    }
+        }
 
-
-        
 
         
         
