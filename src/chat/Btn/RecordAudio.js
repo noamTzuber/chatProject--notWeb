@@ -28,18 +28,17 @@ function RecordAudio(props) {
     return (
         <div>
             <audio id="audioMes" controls  style={{marginLeft: "19%",padding:"0px"}} src={props.srcRec}></audio>
-<div>
-                    <span >
+            <div>
+                <span >
                     <button className="stopBtRec btn-danger " style={{borderRadius:" 0.25rem",border:"0" ,marginLeft:"23%"}} onClick={() => {
                         recorder.stop();
                     }}>stop
                     </button>
                 </span>
-                    <span >
+                <span >
                     <button className="startBtRec btn-success " style={{borderRadius:" 0.25rem",border:"0",marginLeft:"3%"}}  onClick={getAudio}>start</button>
                 </span>
-</div>
-
+            </div>
         </div>
             );
             }
