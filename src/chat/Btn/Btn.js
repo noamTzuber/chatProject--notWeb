@@ -36,6 +36,33 @@ function Btn(props) {
         img.value = "";
     }
 
+    function uploadVid(){
+        let vid = document.getElementById("vid_submit");
+        let vidURL = document.getElementById("vid_submit").value;
+        if(vidURL.length > 0){
+            let fReader = new FileReader()
+            fReader.readAsDataURL(vid.files[0])
+            fReader.onloadend = function(event){
+                var path = event.target.result;
+                var d = new Date();
+                let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
+                let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
+                for (let i = 0; i < users[props.id].chats.length; i++) {
+                    if (props.contact === users[props.id].chats[i].contact) {
+                        users[props.id].chats[i].lastMessage="video";
+                        users[props.id].chats[i].lastTime=time+' '+date;
+                        users[props.id].chats[i].text.push({txt: path, time: time +" "+ date, isIncoming: 0,type:"video"});
+                        props.set(users[props.id].chats[i].text.concat([]));
+                        props.setLast(users[props.id].chats.concat([]));
+                    }
+                }
+            }
+            document.getElementById("closeVidModal").click();
+
+        }
+        vid.value = "";
+    }
+
 
     function send(type) {
         let currentText = document.getElementById("current-text").value;
@@ -200,13 +227,15 @@ function Btn(props) {
 
                         <div className="modal-header" style={{padding:"3px"}}>
                             <h3 className="modal-title" style={{padding:"5px"}}>Rec</h3>
-                            <button type="button" className="close"  style={{padding:"1px",border:"0",
+                            <button id = "closeVidModal" type="button" className="close"  style={{padding:"1px",border:"0",
                                 backgroundColor: "transparent"}} data-dismiss="modal">&times;</button>
                         </div>
 
                         <div className="modal-body" style={{padding:"3px"}}>
                             <div id="vidMes"  >
                                 <VideoRecord srcVid={srcVid} setSrcRec={setSrcVid}></VideoRecord>
+                                <input type="file" accept="video/*" id="vid_submit" name="myfile" onChange={uploadVid} />
+
                             </div>
                         </div>
 
