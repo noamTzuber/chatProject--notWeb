@@ -20,19 +20,14 @@
 }
 .type_msg {position: relative; }
 .msg_send_btn {
-    background: rgba(5, 114, 143, 0.16) none repeat scroll 0 0;
+    background: rgba(5, 114, 143, 0) none repeat scroll 0 0;
     border: black;
     border-radius: 50%;
+    border-bottom-left-radius: 50% !important;
+    border-top-left-radius: 50% !important;
     color: #fff;
-    cursor: pointer;
-    font-size: 17px;
-    height: 33px;
-    position: absolute;
-    right:1.1%;
-    border: 0;
-    border: 1px solid rgba(7, 7, 7, 0.34);
-    top: 15%;
-    width: 33px;
+    margin-top: 43%;
+
 }
 .functionality{
     background: rgba(143, 5, 46, 0.46) none repeat scroll 0 0;
@@ -54,11 +49,7 @@
     right:10%;
 
 }
-#actual-btn{
-    left: -500px;
-    height: 10px;
-    width: 10px;
-}
+
 .input_msg_write input {
     background: rgb(255, 255, 255) none repeat scroll 0 0;
     border-radius:  20px;
@@ -146,10 +137,10 @@ color: green;
 }
 
 .myfunction{
-    position: absolute !important;
-    top: -20px;
-    right: 50px;
-    margin-bottom:50px;
+    /*position: absolute !important;*/
+    /*top: -20px;*/
+    /*right: 50px;*/
+    /*margin-bottom:50px;*/
     border-radius: 50%;
     width: 10%;
 }

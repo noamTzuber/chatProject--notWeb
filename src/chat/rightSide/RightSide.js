@@ -8,7 +8,7 @@ function RightSide(props) {
 
 
     return (
-        <div className="right-container">
+        <div className="right-container" >
             <div className="section">
                 <div className="content">
                     <Contact name={props.currentConversation.contact} img = {props.currentConversation.img} />

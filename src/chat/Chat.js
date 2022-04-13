@@ -22,7 +22,7 @@ function Chat() {
     });
 
     return (
-        <div className='chatbox'>
+        <div className='chatbox' style={{minWidth:"700px"}}>
 
             <div className="col-3">
                 <div className="container">
