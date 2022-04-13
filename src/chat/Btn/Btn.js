@@ -63,6 +63,33 @@ function Btn(props) {
         vid.value = "";
     }
 
+    function uploadRecord(){
+        let audio = document.getElementById("audio_submit");
+        let audioURL = document.getElementById("audio_submit").value;
+        if(audioURL.length > 0){
+            let fReader = new FileReader()
+            fReader.readAsDataURL(audio.files[0])
+            fReader.onloadend = function(event){
+                var path = event.target.result;
+                var d = new Date();
+                let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
+                let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
+                for (let i = 0; i < users[props.id].chats.length; i++) {
+                    if (props.contact === users[props.id].chats[i].contact) {
+                        users[props.id].chats[i].lastMessage="audio";
+                        users[props.id].chats[i].lastTime=time+' '+date;
+                        users[props.id].chats[i].text.push({txt: path, time: time +" "+ date, isIncoming: 0,type:"audio"});
+                        props.set(users[props.id].chats[i].text.concat([]));
+                        props.setLast(users[props.id].chats.concat([]));
+                    }
+                }
+            }
+            document.getElementById("closeRecordModal").click();
+
+        }
+        audio.value = "";
+    }
+
 
     function send(type) {
         let currentText = document.getElementById("current-text").value;
@@ -206,6 +233,8 @@ function Btn(props) {
                         <div className="modal-body" style={{padding:"3px"}}>
                             <div id="audioMes"  >
                             <RecordAudio srcRec={srcRec} setSrcRec={setSrcRec}></RecordAudio>
+                            <input type="file" accept="audio/*" id="audio_submit" name="myfile" onChange={uploadRecord} />
+
                             </div>
                         </div>
 
