@@ -1,4 +1,5 @@
 .list-group-item {
+    min-width: 300px;
     background: rgba(102 79 203 / 52%);
     border-radius: 0em;
     margin: 0.2%;
@@ -17,4 +18,10 @@
     width: 120%;
     }
 
+    .dateOnSummery{
+        right: 0;
+        font-size: 65%;
+        color: black !important;
+
+    }
 

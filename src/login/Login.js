@@ -1,7 +1,9 @@
 import './Login.css'
 import {users} from "../DB/DB";
+import {useNavigate} from 'react-router-dom'
 
 function Login() {
+    const navigate = useNavigate()
     function varifyLogin() {
         var errorMessage = document.getElementById("errorMessage");
         var name = document.getElementById("username").value;
@@ -14,8 +16,10 @@ function Login() {
                 break;
             }
 
-        if(userExist)
-            window.location.href = '/Chat/id=' + i;
+        if(userExist){
+            navigate('/Chat/id=' + i, {state:{id2: i, dataBase:users}})
+            // window.location.href = '/Chat/id=' + i;
+        }
         else{
             errorMessage.innerHTML = "Username or password incorrect";
         }

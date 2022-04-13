@@ -28,7 +28,7 @@ function SummaryConversation(props) {
             <div onClick={() => {
                 showConversation(props.contact)
             }}>
-                <a href="#" className="list-group-item list-group-item-action">
+                <div className="list-group-item list-group-item-action">
                     <div className="row">
                         <div className="col-3">
                             <div style={{backgroundImage: `url(${pic})`, backgroundSize:"cover", width:"50px", height:"50px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center"}}></div>
@@ -37,7 +37,7 @@ function SummaryConversation(props) {
 
                             <div>
                                 <span style={{fontSize:"120%"}}>{props.contact}</span>
-                                <span className="position-absolute top-0 end-0" style={{fontSize:"70%", color:"black !important", margin:"4%"}}>{props.lastTime}</span>
+                                <span className="dateOnSummery">{props.lastTime}</span>
                             </div>
 
                             <div>
@@ -47,7 +47,7 @@ function SummaryConversation(props) {
                         </div>
 
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     )
