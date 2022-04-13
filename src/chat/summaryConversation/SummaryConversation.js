@@ -4,9 +4,9 @@ import users from "../../DB/DB";
 // {name, lastTime, lastMessage, setCurrentConversation}
 function SummaryConversation(props) {
     var showConversation = function (contact) {
-        for (let i = 0; i < users[0].chats.length; i++) {
-            if (contact === users[0].chats[i].contact) {
-                props.setCurrentConversation(users[0].chats[i]);
+        for (let i = 0; i < users[props.id].chats.length; i++) {
+            if (contact === users[props.id].chats[i].contact) {
+                props.setCurrentConversation(users[props.id].chats[i]);
             }
         }
     }
@@ -22,7 +22,7 @@ function SummaryConversation(props) {
     }
 
 
-    var pic = require("../../DB/profilePictures/".concat("",users[0].chats[props.num].img));
+    var pic = require("../../DB/profilePictures/".concat("",users[props.id].chats[props.num].img));
     return (
         <div>
             <div onClick={() => {

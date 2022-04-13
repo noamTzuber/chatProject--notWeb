@@ -17,8 +17,7 @@ function Login() {
             }
 
         if(userExist){
-            navigate('/Chat/id=' + i, {state:{id2: i, dataBase:users}})
-            // window.location.href = '/Chat/id=' + i;
+            navigate('/Chat', {state:{id: i}})
         }
         else{
             errorMessage.innerHTML = "Username or password incorrect";
