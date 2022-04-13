@@ -44,6 +44,8 @@ function Btn(props) {
             fReader.readAsDataURL(vid.files[0])
             fReader.onloadend = function(event){
                 var path = event.target.result;
+                console.log(path);
+
                 var d = new Date();
                 let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
                 let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
@@ -71,6 +73,7 @@ function Btn(props) {
             fReader.readAsDataURL(audio.files[0])
             fReader.onloadend = function(event){
                 var path = event.target.result;
+
                 var d = new Date();
                 let date = + String(d.getDate()).padStart(2, '0')+ '.' +String(d.getMonth() + 1).padStart(2, '0') + '.' + String(d.getFullYear()).slice(2, 4);
                 let time = (d.getHours() < 10 ? '0' : '') + d.getHours() + ':' + (d.getMinutes() < 10 ? '0' : '') + d.getMinutes();
