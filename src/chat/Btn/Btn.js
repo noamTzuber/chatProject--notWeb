@@ -73,7 +73,7 @@ function Btn(props) {
                 users[props.id].chats[i].text.push({txt: srcRec, time: time +" "+ date, isIncoming: 0,type:"audio"});
                 props.set(users[props.id].chats[i].text.concat([]));
                 props.setLast(users[props.id].chats.concat([]));
-
+                document.getElementById("closeRecordModal").click()
             }
         }
         setSrcRec("");
@@ -189,7 +189,7 @@ function Btn(props) {
 
                         <div className="modal-header" style={{padding:"3px"}}>
                             <h3 className="modal-title" style={{padding:"5px"}}>Rec</h3>
-                            <button type="button" className="close"  style={{padding:"1px",border:"0",
+                            <button id = "closeRecordModal" type="button" className="close"  style={{padding:"1px",border:"0",
                                 backgroundColor: "transparent"}} data-dismiss="modal">&times;</button>
                         </div>
 
