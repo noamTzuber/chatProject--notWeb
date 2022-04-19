@@ -1,7 +1,7 @@
 import './Btn.css'
 import users from "../../DB/DB";
 import RecordAudio from "./RecordAudio";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import VideoRecord from "./VideoRecord";
 
 function Btn(props) {
@@ -193,97 +193,97 @@ function Btn(props) {
     return (
 
         <div className='bottom-bar'>
-            <div className="type_msg">
-                <div className="input_msg_write">
-                     <span>
-                         <span>
-                         <div className="input-group">
-                              <div className="btn-group">
-                            <button type="button" id="actual-btn" className="btn myfunction btn-prim "
-                                    data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i className="fa fa-paperclip" aria-hidden="true"></i>
-                            </button>
-                            <div className="dropdown-menu">
-                {/*  pic icon*/}
-                                <button input type="file" accept="image/*" className="fs-6 dropdown-item item"
-                                        data-toggle="modal"
-                                        data-target="#img-modal"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                       height="16"
-                                                                       fill="currentColor" className="bi bi-image-fill"
-                                                                       viewBox="0 0 16 16">
-                                        <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0
+            <div className="input_msg_write">
+                <div className="input-group">
+
+                
+                    <div className="btn-group">
+                        <button type="button" id="actual-btn" className="btn myfunction btn-prim "
+                            data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"><i className="fa fa-paperclip" aria-hidden="true"></i>
+                        </button>
+                        <div className="dropdown-menu">
+
+                            {/*  pic icon*/}
+                            <button input type="file" accept="image/*" className="fs-6 dropdown-item item"
+                                data-toggle="modal"
+                                data-target="#img-modal"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16"
+                                    fill="currentColor" className="bi bi-image-fill"
+                                    viewBox="0 0 16 16">
+                                    <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0
                                             1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0
                                              0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3
                                              .71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0
                                              1.5 1.5 0 0 0 3 0z"/>
-                                        </svg>
-                                </button>
+                                </svg>
+                            </button>
 
-                                {/*  record icon*/}
-                                <button className="dropdown-item rec" href="#" data-toggle="modal"
-                                        data-target="#record-modal"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                         height="16"
-                                                                         fill="currentColor" className="bi bi-mic-fill"
-                                                                         viewBox="0 0 16 16">
-                                    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/><path
-                                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5
-                                    4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
-                                    </svg>
-                                </button>
+                            {/*  record icon*/}
+                            <button className="dropdown-item rec" href="#" data-toggle="modal"
+                                data-target="#record-modal"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" className="bi bi-mic-fill"
+                                    viewBox="0 0 16 16">
+                                    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z" /><path
+                                        d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5
+                                                4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                            </button>
+
+                            {/*  video icon*/}
+                            <button className="dropdown-item " href="#" data-toggle="modal"
+                                data-target="#vid-modal"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    className="bi bi-camera-reels-fill"
+                                    viewBox="0 0 16 16">
+                                    <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                    <path
+                                        d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0
+                                            1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <input id="current-text" style={{ borderRadius: "50px" }} type="text" className="write_msg" placeholder="Type a message" />
+                    <span>
+                        <button onClick={() => { send("txt") }} className="msg_send_btn" type="button">
+
+                            <i className="fa fa-paper-plane-o" style={{ color: "black", borderRadius: "20px" }} aria-hidden="true"></i></button>
+                    </span>
 
 
-                                {/*  video icon*/}
-                                <button className="dropdown-item " href="#" data-toggle="modal"
-                                        data-target="#vid-modal"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                      height="16"
-                                                                      fill="currentColor"
-                                                                      className="bi bi-camera-reels-fill"
-                                                                      viewBox="0 0 16 16">
-          <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-          <path d="M9 6a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-          <path
-              d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0
-              1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7z"/>
-            </svg>
-    </button>
-        </div>
-</div>
-
-                             <input id="current-text" style={{borderRadius:"50px"}} type="text" className="write_msg" placeholder="Type a message"/>
-                            <span>
-                             <button onClick={() => {send("txt")}} className="msg_send_btn" type="button">
-
-                             <i className="fa fa-paper-plane-o" style={{color: "black" ,borderRadius:"20px"}} aria-hidden="true"></i></button>
-                      </span>
-                         </div>
-                     </span>
-                 </span>
+                </div>
             </div>
-        </div>
+
+
+
 
 
             <div className="modal fade" id="record-modal">
                 <div className="modal-dialog">
                     <div className="modal-content">
 
-                        <div className="modal-header" style={{padding: "3px"}}>
-                            <h3 className="modal-title" style={{padding: "5px"}}>Rec</h3>
+                        <div className="modal-header" style={{ padding: "3px" }}>
+                            <h3 className="modal-title" style={{ padding: "5px" }}>Rec</h3>
                             <button id="closeRecordModal" type="button" className="close" style={{
                                 padding: "1px", border: "0",
                                 backgroundColor: "transparent"
                             }} data-dismiss="modal">&times;</button>
                         </div>
 
-                        <div className="modal-body" style={{padding: "3px"}}>
+                        <div className="modal-body" style={{ padding: "3px" }}>
                             <div id="audioMes">
                                 <RecordAudio srcRec={srcRec} setSrcRec={setSrcRec}></RecordAudio>
                                 <input type="file" accept="audio/*" id="audio_submit" name="myfile"
-                                       onChange={uploadRecord}/>
+                                    onChange={uploadRecord} />
 
                             </div>
                         </div>
 
-                        <div className="modal-footer" style={{padding: "3px"}}>
+                        <div className="modal-footer" style={{ padding: "3px" }}>
                             <button type="button" className="btn btn-success" onClick={sendAudio}>Send</button>
 
 
@@ -298,23 +298,23 @@ function Btn(props) {
                 <div className="modal-dialog">
                     <div className="modal-content">
 
-                        <div className="modal-header" style={{padding: "3px"}}>
-                            <h3 className="modal-title" style={{padding: "5px"}}>Rec</h3>
+                        <div className="modal-header" style={{ padding: "3px" }}>
+                            <h3 className="modal-title" style={{ padding: "5px" }}>Rec</h3>
                             <button id="closeVidModal" type="button" className="close" style={{
                                 padding: "1px", border: "0",
                                 backgroundColor: "transparent"
                             }} data-dismiss="modal">&times;</button>
                         </div>
 
-                        <div className="modal-body" style={{padding: "3px"}}>
+                        <div className="modal-body" style={{ padding: "3px" }}>
                             <div id="vidMes">
                                 <VideoRecord srcVid={srcVid} setSrcRec={setSrcVid}></VideoRecord>
-                                <input type="file" accept="video/*" id="vid_submit" name="myfile" onChange={uploadVid}/>
+                                <input type="file" accept="video/*" id="vid_submit" name="myfile" onChange={uploadVid} />
 
                             </div>
                         </div>
 
-                        <div className="modal-footer" style={{padding: "3px"}}>
+                        <div className="modal-footer" style={{ padding: "3px" }}>
                             <button type="button" className="btn btn-success" onClick={sendVid}>Send</button>
 
                         </div>
@@ -327,19 +327,19 @@ function Btn(props) {
                 <div className="modal-dialog">
                     <div className="modal-content">
 
-                        <div className="modal-header" style={{padding: "3px"}}>
-                            <h3 className="modal-title" style={{padding: "5px"}}>Picture</h3>
+                        <div className="modal-header" style={{ padding: "3px" }}>
+                            <h3 className="modal-title" style={{ padding: "5px" }}>Picture</h3>
                             <button type="button" className="close" id="closeButtonImgModal" style={{
                                 padding: "1px", border: "0",
                                 backgroundColor: "transparent"
                             }} data-dismiss="modal">&times;</button>
                         </div>
 
-                        <div className="modal-body" style={{padding: "3px"}}>
-                            <input type="file" accept="image/*" id="img_submit" name="myfile" onChange={uploadImg}/>
+                        <div className="modal-body" style={{ padding: "3px" }}>
+                            <input type="file" accept="image/*" id="img_submit" name="myfile" onChange={uploadImg} />
                         </div>
 
-                        <div className="modal-footer" style={{padding: "3px"}}>
+                        <div className="modal-footer" style={{ padding: "3px" }}>
 
                             <button type="button" className="btn btn-success" onClick={sendVid}>Send</button>
 

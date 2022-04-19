@@ -44,6 +44,24 @@ function Register() {
                 errorMessage.innerHTML += "the confirm password is not match<br>"
         }
 
+        if(document.getElementById("uploadImageButten").value.length > 0){
+            let img = document.getElementById("uploadImageButten");
+            let imgURL = document.getElementById("uploadImageButten").value;
+            if (imgURL.length > 0) {
+            let fReader = new FileReader()
+            fReader.readAsDataURL(img.files[0])
+            fReader.onloadend = function (event) {
+                if (errorMessage.innerHTML === "") {
+                    //push
+                    users.push({ name: newUserName, profilePic: event.target.result, nickName:newNickname, password: newPassword, chats: []})
+                    navigate('/Chat', {state:{id: users.length-1}})
+                }
+            }
+        }
+        }else{
+            errorMessage.innerHTML += "the confirm password is not match<br>"
+        }
+
         if (errorMessage.innerHTML === "") {
             //push
             users.push({ name: "fdb", profilePic: "hermione.jpg", nickName:"fdbdrs", password: newPassword, chats: [
@@ -93,7 +111,7 @@ function Register() {
             </div>
             <div id='picterUpload' style={{marginLeft: '22%'}}>
                 <div className="fs-6">Upload profile picture</div>
-                <input type="file" accept="image/*"/>
+                <input id = "uploadImageButten" type="file" accept="image/*"/>
             </div>
 
             <button id='loginButton' className="btn btn-primary" type="button" onClick={validation}

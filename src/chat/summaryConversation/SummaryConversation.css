@@ -18,10 +18,12 @@
     width: 120%;
     }
 
-    .dateOnSummery{
-        right: 0;
-        font-size: 65%;
-        color: black !important;
-
-    }
+.dateOnSummery{
+    right: 0;
+    font-size: 65%;
+    color: black !important;
+    overflow: hidden;
+    position:absolute;
+    padding-right:3% ;
+}
 
