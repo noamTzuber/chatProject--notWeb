@@ -57,7 +57,7 @@ function UserData(props) {
     return (
         <div className="userData">
 
-                            <div style={{backgroundImage: `url(${profilePic})`, backgroundSize:"cover", width:"70px", height:"70px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center"}}></div>
+                <div style={{backgroundImage: `url(${profilePic})`, backgroundSize:"cover", width:"70px", height:"70px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center", marginLeft:"2%"}}></div>
                 <span className="position-absolute top-50 start-50 translate-middle" style={{fontSize:"170%"}}>{nickname}</span>
 
                 <button id="addConversation" type="button" className="btn btn-outline-light" data-toggle="modal"
