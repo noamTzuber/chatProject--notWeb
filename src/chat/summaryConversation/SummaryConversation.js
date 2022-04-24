@@ -3,12 +3,16 @@ import users from "../../DB/DB";
 
 // {name, lastTime, lastMessage, setCurrentConversation}
 function SummaryConversation(props) {
+    function showBottomBar(){
+
+    }
     var showConversation = function (contact) {
         for (let i = 0; i < users[props.id].chats.length; i++) {
             if (contact === users[props.id].chats[i].contact) {
                 props.setCurrentConversation(users[props.id].chats[i]);
             }
         }
+        showBottomBar();
     }
     //const profilePic = require("../../DB/profilePictures/".concat("", users[0].chats[props.key].img));
     var lastMessage;
