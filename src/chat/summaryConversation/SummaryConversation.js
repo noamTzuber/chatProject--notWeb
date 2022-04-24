@@ -34,14 +34,19 @@ function SummaryConversation(props) {
             }}>
                 <div className="list-group-item list-group-item-action">
                     <div className="row">
-                        <div className="col-3">
-                            <div style={{backgroundImage: `url(${pic})`, backgroundSize:"cover", width:"50px", height:"50px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center"}}></div>
+                        <div className="col-2">
+                            <div style={{backgroundImage: `url(${pic})`, backgroundSize:"cover", width:"50px", height:"50px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center", marginRight:"100%"}}></div>
                         </div>
-                        <div className="col-9">
-
+                        <div className="col-10" style={{paddingLeft:"5%"}}>
                             <div>
-                                <span style={{fontSize:"120%"}}>{props.contact}</span>
-                                <span className="dateOnSummery">{props.lastTime}</span>
+                                <div className="row">
+                                    <div className="col-8">
+                                        <span style={{fontSize:"120%"}}>{props.contact}</span>
+                                    </div>
+                                    <div className="col-4">
+                                        <span className="dateOnSummery">{props.lastTime}</span>
+                                    </div>
+                                    </div>
                             </div>
 
                             <div>

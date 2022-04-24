@@ -1,7 +1,7 @@
 import './Btn.css'
 import users from "../../DB/DB";
 import RecordAudio from "./RecordAudio";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import VideoRecord from "./VideoRecord";
 
 function Btn(props) {
@@ -192,6 +192,7 @@ function Btn(props) {
 
     return (
 
+
         <div className='bottom-bar' style={{backgroundColor: "rgb(194 190 190 / 42%)"}}>
             <div className="input-group">
                 <button style={{border:"0px",padding: "0px"}} className="btn  " type="button"
@@ -214,10 +215,12 @@ function Btn(props) {
                                                                fill="currentColor" className="bi bi-image-fill"
                                                                viewBox="0 0 16 16">
                             <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0
+
                                             1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0
                                              0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3
                                              .71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0
                                              1.5 1.5 0 0 0 3 0z"/>
+
                         </svg>
                         </button>
 
@@ -272,32 +275,36 @@ function Btn(props) {
                          </div>
                      </span>
                  </span>
+
+                        
             </div>
-        </div>
+
+
+
 
 
             <div className="modal fade" id="record-modal">
                 <div className="modal-dialog">
                     <div className="modal-content">
 
-                        <div className="modal-header" style={{padding: "3px"}}>
-                            <h3 className="modal-title" style={{padding: "5px"}}>Rec</h3>
+                        <div className="modal-header" style={{ padding: "3px" }}>
+                            <h3 className="modal-title" style={{ padding: "5px" }}>Rec</h3>
                             <button id="closeRecordModal" type="button" className="close" style={{
                                 padding: "1px", border: "0",
                                 backgroundColor: "transparent"
                             }} data-dismiss="modal">&times;</button>
                         </div>
 
-                        <div className="modal-body" style={{padding: "3px"}}>
+                        <div className="modal-body" style={{ padding: "3px" }}>
                             <div id="audioMes">
                                 <RecordAudio srcRec={srcRec} setSrcRec={setSrcRec}></RecordAudio>
                                 <input type="file" accept="audio/*" id="audio_submit" name="myfile"
-                                       onChange={uploadRecord}/>
+                                    onChange={uploadRecord} />
 
                             </div>
                         </div>
 
-                        <div className="modal-footer" style={{padding: "3px"}}>
+                        <div className="modal-footer" style={{ padding: "3px" }}>
                             <button type="button" className="btn btn-success" onClick={sendAudio}>Send</button>
 
 
@@ -312,23 +319,23 @@ function Btn(props) {
                 <div className="modal-dialog">
                     <div className="modal-content">
 
-                        <div className="modal-header" style={{padding: "3px"}}>
-                            <h3 className="modal-title" style={{padding: "5px"}}>Rec</h3>
+                        <div className="modal-header" style={{ padding: "3px" }}>
+                            <h3 className="modal-title" style={{ padding: "5px" }}>Rec</h3>
                             <button id="closeVidModal" type="button" className="close" style={{
                                 padding: "1px", border: "0",
                                 backgroundColor: "transparent"
                             }} data-dismiss="modal">&times;</button>
                         </div>
 
-                        <div className="modal-body" style={{padding: "3px"}}>
+                        <div className="modal-body" style={{ padding: "3px" }}>
                             <div id="vidMes">
                                 <VideoRecord srcVid={srcVid} setSrcRec={setSrcVid}></VideoRecord>
-                                <input type="file" accept="video/*" id="vid_submit" name="myfile" onChange={uploadVid}/>
+                                <input type="file" accept="video/*" id="vid_submit" name="myfile" onChange={uploadVid} />
 
                             </div>
                         </div>
 
-                        <div className="modal-footer" style={{padding: "3px"}}>
+                        <div className="modal-footer" style={{ padding: "3px" }}>
                             <button type="button" className="btn btn-success" onClick={sendVid}>Send</button>
 
                         </div>
@@ -341,19 +348,19 @@ function Btn(props) {
                 <div className="modal-dialog">
                     <div className="modal-content">
 
-                        <div className="modal-header" style={{padding: "3px"}}>
-                            <h3 className="modal-title" style={{padding: "5px"}}>Picture</h3>
+                        <div className="modal-header" style={{ padding: "3px" }}>
+                            <h3 className="modal-title" style={{ padding: "5px" }}>Picture</h3>
                             <button type="button" className="close" id="closeButtonImgModal" style={{
                                 padding: "1px", border: "0",
                                 backgroundColor: "transparent"
                             }} data-dismiss="modal">&times;</button>
                         </div>
 
-                        <div className="modal-body" style={{padding: "3px"}}>
-                            <input type="file" accept="image/*" id="img_submit" name="myfile" onChange={uploadImg}/>
+                        <div className="modal-body" style={{ padding: "3px" }}>
+                            <input type="file" accept="image/*" id="img_submit" name="myfile" onChange={uploadImg} />
                         </div>
 
-                        <div className="modal-footer" style={{padding: "3px"}}>
+                        <div className="modal-footer" style={{ padding: "3px" }}>
 
                             <button type="button" className="btn btn-success" onClick={sendVid}>Send</button>
 
