@@ -36,7 +36,7 @@ function RecordAudio(props) {
                     </button>
                 </span>
                 <span >
-                    <button className="startBtRec btn-success " style={{borderRadius:" 0.25rem",border:"0",marginLeft:"3%"}}  onClick={getAudio}>start</button>
+                        <button className="startBtRec btn-success " style={{borderRadius:" 0.25rem",border:"0",marginLeft:"3%"}}  onClick={getAudio}>start</button>
                 </span>
             </div>
         </div>
