@@ -1,7 +1,7 @@
 export const users = [{
     name: 'harry',
     nickName: 'potter',
-    password: 'itay1234',
+    password: 'harry1234',
     profilePic: "harry.jpg",
     chats: [
         {
@@ -52,7 +52,7 @@ export const users = [{
 },{
     name: 'noam',
     nickName: 'Noamos',
-    password: 'itay1234',
+    password: 'noam1234',
     profilePic: "ron.jpg",
     chats: [
     {
@@ -65,7 +65,24 @@ export const users = [{
     },
     
 ]
-}
+},
+        {
+        name: 'itay',
+        nickName: 'itayos',
+        password: 'itay1234',
+        profilePic: "dobby.jpg",
+        chats: [
+            {
+                contact: 'harry',
+                nickName: 'potter',
+                img: "harry.jpg",
+                lastMessage: 'Hey my name is noam',
+                lastTime: '20:29 14.04.22',
+                text: [{txt: 'Hey my name is noam', isIncoming: 0, time: "20:29 14.04.22", type:"txt"}]
+            },
+
+        ]
+    }
 
 ]
 export default users
