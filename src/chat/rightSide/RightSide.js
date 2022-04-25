@@ -11,7 +11,7 @@ function RightSide(props) {
         <div className="right-container" >
             <div className="section">
                 <div className="content">
-                    <Contact name={props.currentConversation.contact} img = {props.currentConversation.img} />
+                    <Contact name={props.currentConversation.nickName} img = {props.currentConversation.img} />
                 </div>
                 <div className='scrollable-content content' style={{backgroundColor: "rgb(194 190 190 / 42%)"}}>
 

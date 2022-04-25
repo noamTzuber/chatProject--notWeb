@@ -65,27 +65,27 @@ function Register() {
             errorMessage.innerHTML += "the confirm password is not match<br>"
         }
 
-        if (errorMessage.innerHTML === "") {
-            //push
-            users.push({ name: "fdb", profilePic: "hermione.jpg", nickName:"fdbdrs", password: newPassword, chats: [
-                // {
-                //     contact: 'hermione',
-                //     img: "hermione.jpg",
-                //     lastMessage: 'bye8',
-                //     lastTime: '80:00 18.10.28',
-                //     text: [{txt: 'hey my nam22222222222222222222222e is noam', isIncoming: 0, time: "0:29 11.11.19", type:"txt"}, {txt: "b", isIncoming: 1 , time: "20:29 11.11.19 ",type:"txt"}]
-                // } ,
-                // {
-                //     contact: 'ron',
-                //     img: "ron.jpg",
-                //     lastMessage: 'bye2',
-                //     lastTime: '11:00 12.10.25',
-                //     text: [{txt: 'hey my name is noam', isIncoming: 0, time: "20:29 11.11.19", type:"txt"}, {txt: "blob", isIncoming: 1 , time: "20:29 11.11.19 ",type:"txt"}]
-                // }  
-            ] })
-            navigate('/Chat', {state:{id: users.length-1}})
-
-        }
+        // if (errorMessage.innerHTML === "") {
+        //     //push
+        //     users.push({ name: "fdb", profilePic: "hermione.jpg", nickName:"fdbdrs", password: newPassword, chats: [
+        //         // {
+        //         //     contact: 'hermione',
+        //         //     img: "hermione.jpg",
+        //         //     lastMessage: 'bye8',
+        //         //     lastTime: '80:00 18.10.28',
+        //         //     text: [{txt: 'hey my nam22222222222222222222222e is noam', isIncoming: 0, time: "0:29 11.11.19", type:"txt"}, {txt: "b", isIncoming: 1 , time: "20:29 11.11.19 ",type:"txt"}]
+        //         // } ,
+        //         // {
+        //         //     contact: 'ron',
+        //         //     img: "ron.jpg",
+        //         //     lastMessage: 'bye2',
+        //         //     lastTime: '11:00 12.10.25',
+        //         //     text: [{txt: 'hey my name is noam', isIncoming: 0, time: "20:29 11.11.19", type:"txt"}, {txt: "blob", isIncoming: 1 , time: "20:29 11.11.19 ",type:"txt"}]
+        //         // }
+        //     ] })
+        //     navigate('/Chat', {state:{id: users.length-1}})
+        //
+        // }
     }
 
 

@@ -41,10 +41,10 @@ function SummaryConversation(props) {
                             <div>
                                 <div className="row">
                                     <div className="col-8">
-                                        <span style={{fontSize:"120%"}}>{props.contact}</span>
+                                        <span style={{fontSize:"120%"}}>{props.nickName}</span>
                                     </div>
                                     <div className="col-4">
-                                        <span className="dateOnSummery">{props.lastTime}</span>
+                                        <span className="dateOnSummery" >{props.lastTime}</span>
                                     </div>
                                     </div>
                             </div>

@@ -13,7 +13,7 @@ function Chat() {
     const {state} = useLocation();
     const { id } = state; 
 
-    const [currentTalk, setCurrentTalk]= useState({contact:'',lastMessage:'',lastTime:'',text:[], img:''})
+    const [currentTalk, setCurrentTalk]= useState({contact:'',nickName:'',lastMessage:'',lastTime:'',text:[], img:''})
     const [currentMessages, setCurrentMessages]= useState([])
     const [contacts, setContacts] = useState(users[id].chats)
 
