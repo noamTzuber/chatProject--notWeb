@@ -25,7 +25,10 @@ function Register() {
             errorMessage.innerHTML += "please enter Nickname<br>"
         } else if (/[^a-zA-Z0-9]/.test(newNickname)) {
             errorMessage.innerHTML += "Use only English and numbers in Nickname<br>";
-        }
+        } else if(newNickname.length>8)
+            errorMessage.innerHTML += "Use only 8 characters in Nickname<br>";
+
+    
 
 
         let newPassword = document.getElementById("password").value;

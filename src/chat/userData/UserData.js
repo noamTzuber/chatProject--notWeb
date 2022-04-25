@@ -55,6 +55,7 @@ function UserData(props) {
 
 
     return (
+
         <div className="d-flex userData" style={{backgroundColor:"rgba(194, 190, 190, 0.42)", marginLeft: "0%"}}>
                 <div className="col-3 card d-flex" style={{justifyContent: "center",background: "none",border: "none", borderRadius: "25px", marginLeft: "3%", width: "75px", height: "75px"}}>
                     <img src={profilePic} className="rounded-circle" style={{height: "70px", width: "70px", alignSelf: "center", justifySelf: "center"}}/>

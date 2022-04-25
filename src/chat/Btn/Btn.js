@@ -6,6 +6,9 @@ import VideoRecord from "./VideoRecord";
 
 function Btn(props) {
 
+
+
+
     const [srcRec, setSrcRec] = useState('')
     const [srcVid, setSrcVid] = useState('')
 
@@ -187,6 +190,16 @@ function Btn(props) {
         }
         setSrcVid("");
 
+    }
+
+    
+    if(props.contact == ''){
+        return(
+        <div className='bottom-bar' style={{backgroundColor: "rgb(194 190 190 / 42%)"}}>
+            <div className="input-group">
+            </div>
+        </div>
+        );
     }
 
 
