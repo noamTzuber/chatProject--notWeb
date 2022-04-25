@@ -37,9 +37,11 @@ function UserData(props) {
             }
         }
 
-
-        if(exist && !onMyContacts && contactName !== users[props.id].name){
-            users[props.id].chats.push({contact: contactName, img: users[i].profilePic, lastMessage: "", lastTime: "", text: []})
+        if(onMyContacts){
+            document.getElementById("addUserErrorMessage").innerHTML = "the user already exist";
+        }
+        else if(exist && !onMyContacts && contactName !== users[props.id].name){
+            users[props.id].chats.push({contact: contactName,nickName: users[i].nickName, img: users[i].profilePic, lastMessage: "", lastTime: "", text: []})
             props.setContacts(users[props.id].chats.concat([]))
             document.getElementById("closeButtonModal").click();
 

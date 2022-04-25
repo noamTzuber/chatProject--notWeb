@@ -333,7 +333,7 @@ function Btn(props) {
                     <div className="modal-content">
 
                         <div className="modal-header" style={{ padding: "3px" }}>
-                            <h3 className="modal-title" style={{ padding: "5px" }}>Rec</h3>
+                            <h3 className="modal-title" style={{ padding: "5px" }}>Video</h3>
                             <button id="closeVidModal" type="button" className="close" style={{
                                 padding: "1px", border: "0",
                                 backgroundColor: "transparent"
@@ -342,7 +342,7 @@ function Btn(props) {
 
                         <div className="modal-body" style={{ padding: "3px" }}>
                             <div id="vidMes">
-                                <VideoRecord srcVid={srcVid} setSrcRec={setSrcVid}></VideoRecord>
+                                {/*<VideoRecord srcVid={srcVid} setSrcRec={setSrcVid}></VideoRecord>*/}
                                 <input type="file" accept="video/*" id="vid_submit" name="myfile" onChange={uploadVid} />
 
                             </div>
