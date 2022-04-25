@@ -27,8 +27,7 @@ function Chat() {
             <div className="col-3">
                 <div className="container">
                     <div className="section" id="left-section">
-                        <div className="content">
-
+                        <div className="content"   >
                             <UserData id={id} setContacts={setContacts}/>
                         </div>
                         <div className="scrollable-content" id="summary-conversation"
