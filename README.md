@@ -17,7 +17,9 @@ The package we used are:
 In order to upload the site, write "npm start" in the command line.
 
 The existing user is:
+
 Username: harry
+
 Password: harry1234
 
 In this user you can see correspondence of conversations with 5 different users encoded in the data structure of the program, so when refreshed they will not be deleted, but new messages yes.
