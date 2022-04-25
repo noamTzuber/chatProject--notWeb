@@ -2,11 +2,17 @@
 # read me
 
 The package we used are:
+
 "react": "^ 17.0.2",
+
 "react-dom": "^ 17.0.2",
+
 "react-router-dom": "^ 6.2.2",
+
 "react-scripts": "^ 5.0.0",
+
 "web-vitals": "^ 2.1.4"
+
 (You can see them in the package.json file)
 
 In order to upload the site, write "npm start" in the command line.
