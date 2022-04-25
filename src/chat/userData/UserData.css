@@ -1,8 +1,12 @@
 .userData{
     position: relative;
     width: 100%;
+
+    padding: 1%;
+
     height: 79px;
     padding: 2.5%;
+
     padding-left: 0px;
     background-color:rgb(194 190 190 / 42%);
     border-radius: 25px;
