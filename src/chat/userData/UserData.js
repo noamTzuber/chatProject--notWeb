@@ -55,13 +55,16 @@ function UserData(props) {
 
 
     return (
-        <div className="userData">
-
-                <div style={{backgroundImage: `url(${profilePic})`, backgroundSize:"cover", width:"70px", height:"70px", borderRadius:"50%", clipPath: "circle()", backgroundPosition: "center center", marginLeft:"2%"}}></div>
-                <span className="position-absolute top-50 start-50 translate-middle" style={{fontSize:"170%"}}>{nickname}</span>
-
+        <div className="d-flex userData" style={{backgroundColor:"rgba(194, 190, 190, 0.42)", marginLeft: "0%"}}>
+                <div className="col-3 card d-flex" style={{justifyContent: "center",background: "none",border: "none", borderRadius: "25px", marginLeft: "3%", width: "75px", height: "75px"}}>
+                    <img src={profilePic} className="rounded-circle" style={{height: "70px", width: "70px", alignSelf: "center", justifySelf: "center"}}/>
+                </div>
+            <div className="col card d-flex text-truncate" style={{display: "inline-block" ,border: "none",fontSize:"120%", background: "none", justifyContent: "center", alignItems: "center"}}>WWWWWWWW
+                {/*<span className="position-absolute top-50 start-50 translate-middle" style={{fontSize:"170%"}}>{nickname}</span>*/}
+            </div>
+<div className="col-2 card d-flex"  style={{width: "15%",background: "none",borderRadius: "30%", border: "none",marginTop: "-2%", justifyContent: "center", alignItems: "center"}}>
                 <button id="addConversation" type="button" className="btn btn-outline-light" data-toggle="modal"
-                data-target="#myModal" style={{position:"absolute", top:"20%", right:"0%"}}>
+                data-target="#myModal" style={{}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 className="bi bi-person-plus-fill" viewBox="0 0 16 16">
                 <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -69,6 +72,7 @@ function UserData(props) {
                     d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                 </svg>
                 </button>
+</div>
 
     {/** 
             <div style={{backgroundImage: `url(${profilePic})`, backgroundSize:"cover", width:"70px", height:"70px", clipPath: "circle()", backgroundPosition: "center center", marginLeft:"3%"}}></div>
