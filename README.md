@@ -14,7 +14,7 @@ The package we used are:
 "web-vitals": "^ 2.1.4"
 (You can see them in the package.json file)
 
-In order to upload the site, write "npm start" in the command line.
+In order to upload the site, write "npm start" in the command line (write npm install in the first time you use the project).
 
 The existing user is:
 
