@@ -19,7 +19,7 @@ function IncomingMessage({txt,time, type}) {
     if(type==="txt")
     {
     return (
-            <div className="IncomingMessage">
+            <div className="IncomingMessage" style={{wordBreak:"break-all"}}>
                 {txt}
                 <div>
                     <small style={{fontSize: "70%"}} className="text-muted" id="slast-ma">
